@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EsNya Kak Ity - Es Teh Seger 4 Ribuan</title>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body{
+  padding-top: 112px; /* 70 navbar + 42 announce */
+  background: #FAFCFA;
+  color: #3A6B2F;
+}
+
+/* === NAVBAR BS3 FIX TANPA !IMPORTANT === */
+.navbar-inverse{
+  background: #fff;
+  border: 0;
+  border-bottom: 2px solid #C5E1A5;
+  border-radius: 0;
+  margin-bottom: 0;
+  min-height: 70px;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1030;
+}
+.navbar-inverse .navbar-brand{
+  color: #3A6B2F;
+  font-size: 22px;
+  font-weight: 800;
+  height: 70px;
+  line-height: 40px;
+  padding: 15px;
+}
+.navbar-inverse .navbar-nav > li > a{
+  color: #3A6B2F;
+  font-weight: 500;
+  font-size: 15px;
+  height: 70px;
+  line-height: 40px;
+  padding: 15px 20px;
+}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus{
+  color: #2D5016;
+  background: #F3F8F3;
+}
+.navbar-inverse .navbar-toggle{
+  border-color: #C5E1A5;
+  margin-top: 18px;
+  margin-right: 15px;
+}
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus{
+  background: #F3F8F3;
+}
+.navbar-inverse .navbar-toggle .icon-bar{
+  background: #3A6B2F;
+}
+.navbar-inverse .navbar-collapse{
+  border-top: 0;
+  box-shadow: none;
+}
+
+
+/* ANNOUNCE BAR */
+.announce-bar{
+  background: linear-gradient(135deg, #E8F5E9 0%, #D4EBD6 100%);
+  color: #2D5016;
+  padding: 12px 0;
+  font-size: 13px;
+  font-weight: 600;
+  position: fixed;
+  top: 70px;
+  left: 0; right: 0;
+  z-index: 1029;
+  border-bottom: 1.5px solid #C5E1A5;
+  text-align: center;
+}
+.hero {
+  background: linear-gradient(135deg, #FAFCFA 0%, #F3F8F3 100%);
+  min-height: calc(100dvh - 112px);
+  display: flex;
+  align-items: center;
+}
+.hero h1 {
+  font-size: 56px;
+  font-weight: 800;
+  color: #3A6B2F;
+  margin: 0 0 20px;
+}
+.hero p {
+  font-size: 17px;
+  color: #4B5563;
+  margin-bottom: 32px;
+  max-width: 480px;
+}
+.btn-primary {
+  background: #3A6B2F;
+  color: white;
+  padding: 14px 36px;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 12px;
+  border: 0;
+}
+.btn-primary:hover { 
+  background: #2D5016; 
+}
+.hero img {
+  max-width: 300px;
+}
+.our-story {
+  padding: 70px 0;
+  background: white;
+}
+.our-story h2 {
+  font-size: 40px;
+  font-weight: 800;
+  color: #3A6B2F;
+  margin: 0 0 40px;
+  text-align: center;
+}
+.our-story p {
+  font-size: 16px;
+  color: #4B5563;
+  line-height: 1.8;
+}
+.our-story .kecil {
+  font-size: 14px;
+  font-style: italic;
+  color: #648534;
+}
+.sedekah-box-home {
+  background: linear-gradient(135deg, #E8F5E9 0%, #D4EBD6 100%);
+  color: #2D5016;
+  padding: 28px 25px;
+  border-radius: 18px;
+  text-align: center;
+  margin: 30px 0;
+  border: 1.5px solid #C5E1A5;
+}
+.sedekah-box-home span {
+  font-size: 22px;
+  font-weight: 800;
+  display: block;
+  margin-bottom: 8px;
+  letter-spacing: 0.8px;
+  color: #2D5016;
+}
+.btn-outline {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 28px;
+  border: 2px solid #3A6B2F;  
+  color: #3A6B2F;
+  font-size: 14px;
+  font-weight: 700; 
+  border-radius: 12px;
+  background: white;
+}
+.story-img img {
+  max-width: 380px;
+  border-radius: 20px;
+}
+.promo {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #FAFCFA 0%, #F3F8F3 100%);
+}
+.promo h2 {
+  font-size: 38px;
+  font-weight: 800;
+  color: #2D5016;
+  margin: 0 0 50px;
+  text-align: center;
+}
+.promo-grid {
+  display: flex;
+  gap: 25px;
+}
+.promo-card {
+  background: white;
+  border-radius: 18px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(58,107,47,0.05);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.promo-day {
+  background: #E8F5E9;
+  color: #3A6B2F;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.promo-day.jumat {
+  background: linear-gradient(135deg, #FFF3CD 0%, #FFE69C 100%);
+  color: #8B5A00;
+}
+.promo-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: auto;
+}
+.promo-text {flex: 1}
+.promo-text h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2D5016;
+  margin: 0 0 12px;
+}
+.buy2get1-box {
+  background: #F0F7F0;
+  border: 1.5px dashed #C5E1A5;
+  color: #2D5016;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: center;
+  padding: 14px 10px;
+  border-radius: 12px;
+  margin: 14px 0;
+  letter-spacing: 0.5px;
+}
+.promo-img img {
+  width: 90px;
+  height: 100px;
+  object-fit: contain;
+}
+.promo-img-jumat img {
+  width: 60px;
+  height: 80px;
+  object-fit: contain;
+}
+.testimoni {
+  padding: 70px 0;
+  background: white;
+}
+.testimoni h2 {
+  font-size: 40px;
+  font-weight: 800;
+  color: #3A6B2F;
+  margin: 0 0 40px;
+  text-align: center;
+}
+.testi-ss {
+  border-radius: 16px;
+  padding: 6px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.testi-ss img {
+  width: 80%;
+  border-radius: 12px;
+  display: inline-block;
+}
+.footer-kity{
+  background: linear-gradient(135deg, #FAFCFA 0%, #F3F8F3 100%);
+  color: #4B5563;
+  padding: 45px 20px 20px;
+  margin-top: 40px;
+  border-top: 1px solid #E8F0E8;
+  width: 100%;
+  text-align: center;
+}
+.footer-logo{
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 14px;
+  color: #3A6B2F;
+}
+.footer-bottom{
+  border-top: 1px solid #E8F0E8;
+  padding-top: 18px;
+  text-align: center;
+  font-size: 13px;
+  color: #656667;
+}
+/* RESPONSIVE HP */
+@media (max-width: 767px){
+  body{padding-top: 102px} /* 60 + 42 */
+  
+  .navbar.navbar-inverse{min-height: 60px}
+  .navbar.navbar-inverse .navbar-brand{height: 60px; line-height: 30px; font-size: 20px}
+  .navbar.navbar-inverse .navbar-nav > li > a{height: auto; line-height: 20px; padding: 15px}
+  .navbar.navbar-inverse .navbar-nav{float: none; margin: 0}
+  .navbar.navbar-inverse .navbar-nav > li{float: none}
+  
+  .announce-bar{top: 60px; font-size: 12px; padding: 10px 0}
+  .hero{
+    min-height: auto;
+    padding: 30px 18px 70px;
+    text-align: center;
+  }
+  .hero h1{font-size: 32px; margin-bottom: 18px; line-height: 1.2;}
+  .hero p{font-size: 15px; margin-bottom: 32px;}
+  .hero img{max-width: 200px; margin: 0 auto 20px; display: block;}
+  
+  .our-story{padding: 50px 18px}
+  .our-story h2{font-size: 28px; margin-bottom: 30px}
+  .story-img{margin-bottom: 25px}
+  .story-img img{max-width: 100%}
+  .sedekah-box-home span{font-size: 18px}
+  .sedekah-box-home p{font-size: 13px}
+  
+  .promo{padding: 50px 18px}
+  .promo h2{font-size: 26px; margin-bottom: 30px}
+  .promo-grid{display: block}
+  .promo-card{margin-bottom: 20px; padding: 24px}
+  .promo-content{flex-direction: column; text-align: center}
+  .promo-img, .promo-img-jumat{margin-top: 15px}
+  .promo-img img{width: 80px; height: 90px}
+  .promo-img-jumat img{width: 55px; height: 75px}
+  .buy2get1-box{font-size: 18px}
+  .buy2get1-box span{font-size: 22px}
+  
+  .testimoni{padding: 50px 18px}
+  .testimoni h2{font-size: 28px; margin-bottom: 30px}
+  
+  .footer-kity{padding: 35px 18px 18px; margin-top: 30px}
+  .col-md-3, .col-md-5, .col-md-6, .col-md-7{margin-bottom: 25px}}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle Nav</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">EsNya Kak Ity</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="tentang.html">Tentang</a></li>
+        <li><a href="outlet.html">Outlet</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>	
+
+<div class="announce-bar">
+    Only the best for you bestie. Gula asli 100%🔥
+</div>
+
+<section class="hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5 col-sm-push-7 text-center">
+        <img src="es-removebg-preview.png" alt="Logo EsNya Kak Ity">
+      </div>
+      <div class="col-md-7 col-sm-pull-5">
+        <h1>Bingung Mau Minum Apa?</h1>
+        <p>Ke EsNya Kak Ity aja bestie! 7 varian, harga mulai 4rb doang dan dibuat fresh setiap hari.</p>
+        <a href="menu.html" class="btn btn-primary">Lihat Varian</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="our-story">
+  <div class="container">
+    <h2>Our Story</h2>
+    <div class="row">
+      <div class="col-md-5">
+        <div class="story-img">
+          <img src="owner.jpeg" alt="Kak Ity - Owner EsNya Kak Ity" class="img-responsive center-block">
+        </div>
+      </div>
+      <div class="col-md-7">
+         <p>EsNya Kak Ity berdiri sejak 2023 dari 1 gerobak. Alhamdulillah, sekarang sudah 5 outlet dan tetap konsisten pakai 100% gula asli, tanpa pengawet. Kami juga rutin sedekah ke masjid tiap Jum'at, sekaligus ada promo Buy 2 Get 1 Free setiap Jumat.</p>
+        
+        <div class="sedekah-box-home">
+          <span>🍃 BERDAGANG SAMBIL BERSEDEKAH</span>
+          <p>Setiap cup kamu ada sedekah didalamnya</p>
+        </div>
+        
+        <p class="kecil">Jadi, kalau kakak beli EsNya Kak Ity artinya kakak sudah ikut sedekah juga. Mungkin Kecil? Iya. Tapi kalau bareng-bareng jadi banyak kan, Insya Allah berkah. 💚</p>
+        
+        <a href="tentang.html" class="btn btn-default btn-outline">Selengkapnya →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="promo">
+  <div class="container">
+    <h2>Promo Mingguan Spesial</h2>
+    <div class="row promo-grid">
+      <div class="col-md-6">
+        <div class="promo-card">
+          <span class="promo-day">SENIN</span>
+          <div class="promo-content">
+            <div class="promo-text">
+              <h3>Monday QRIS</h3>
+              <p>Bayar pake QRIS <b>GRATIS BETTER</b><br>Upgrade ke cup better tanpa biaya tambahan</p>
+            </div>
+            <div class="promo-img">
+              <img src="better-removebg-preview.png" alt="Better">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="promo-card">
+          <span class="promo-day jumat">JUMAT BERKAH 🕌</span>
+          <div class="promo-content">
+            <div class="promo-text">
+              <h3>Jumat Berkah</h3>
+              <div class="buy2get1-box">
+                BUY 2 <span>GET 1 FREE</span>
+              </div>
+              <p>Beli 2 Es Teh Original GRATIS 1<br>Beli 2 Greentea GRATIS 1 Es Teh Original</p>
+              <p><small>*Berlaku kelipatan, setiap Jumat aja ya bestie</small></p>
+            </div>
+            <div class="promo-img-jumat">
+              <img src="teh-ori-removebg-preview.png" alt="Es Teh Original">
+              <img src="grentea-removebg-preview.png" alt="Greentea">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimoni">
+  <div class="container">
+    <h2>Testimoni</h2>
+    <div class="row">
+      <div class="col-md-3 col-xs-6">
+        <div class="testi-ss">
+          <img src="tes1.jpeg" alt="Testimoni 1" class="img-responsive">
+        </div>
+      </div>
+      <div class="col-md-3 col-xs-6">
+        <div class="testi-ss">
+          <img src="test2.jpeg" alt="Testimoni 2" class="img-responsive">
+        </div>
+      </div>
+      <div class="col-md-3 col-xs-6">
+        <div class="testi-ss">
+          <img src="testi3.jpeg" alt="Testimoni 3" class="img-responsive">
+        </div>
+      </div>
+      <div class="col-md-3 col-xs-6">
+        <div class="testi-ss">
+          <img src="testii4.jpeg" alt="Testimoni 4" class="img-responsive">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer-kity">
+  <div class="container footer-grid">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="footer-logo">EsNya Kak Ity</div>
+        <p>Es teh seger 4 ribuan. 100% gula asli, tanpa pengawet, dibuat fresh setiap hari. Dompet aman tenggorokan adem!</p>
+      </div>
+      <div class="col-md-3">
+        <h4>Contact Us</h4>
+        <p><a href="tel:085163007071">📞 Telepon: 0851-6300-7071</a><br>
+        <a href="https://wa.me/6285163007071" target="_blank">📱 WhatsApp: 0851-6300-7071</a><br>
+        <a href="https://www.instagram.com/eskakity" target="_blank">📸 Instagram</a><br>
+        <a href="#" target="_blank">🎵 TikTok</a></p>
+      </div>
+      <div class="col-md-3">
+        <h4>Address</h4>
+        <p>📍 Jl. Kuala Madu<br>Depan Pondok Pesantren<br>Muhammadiyah</p>
+         <a href="https://maps.app.goo.gl/UXwX31VPiWoHEswo9" target="_blank">Lihat Maps</a>
+      </div>
+      <div class="col-md-3">
+        <h4>Jam Buka</h4>
+        <p>Senin - Minggu<br>09.00 - 21.00 WIB</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    Dibuat dengan cinta ❤️ | Es teh paling seger.
+  </div>
+</footer>
+
+<script src="bootstrap/js/jQuery.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

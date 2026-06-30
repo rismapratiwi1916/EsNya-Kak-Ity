@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Outlet - EsNya Kak Ity</title>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body{
+  padding-top: 70px; /* 70 navbar doang, ga ada announce */
+  background: #FAFCFA;
+  color: #3A6B2F;
+}
+
+/* === NAVBAR BS3 FIX === */
+.navbar-inverse{
+  background: #fff;
+  border: 0;
+  border-bottom: 2px solid #C5E1A5;
+  border-radius: 0;
+  margin-bottom: 0;
+  min-height: 70px;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1030;
+}
+.navbar-inverse .navbar-brand{
+  color: #3A6B2F;
+  font-size: 22px;
+  font-weight: 800;
+  height: 70px;
+  line-height: 40px;
+  padding: 15px;
+}
+.navbar-inverse .navbar-nav > li > a{
+  color: #3A6B2F;
+  font-weight: 500;
+  font-size: 15px;
+  height: 70px;
+  line-height: 40px;
+  padding: 15px 20px;
+}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus{
+  color: #2D5016;
+  background: #F3F8F3;
+}
+.navbar-inverse .navbar-toggle{
+  border-color: #C5E1A5;
+  margin-top: 18px;
+  margin-right: 15px;
+}
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus{
+  background: #F3F8F3;
+}
+.navbar-inverse .navbar-toggle .icon-bar{
+  background: #3A6B2F;
+}
+.navbar-inverse .navbar-collapse{
+  border-top: 0;
+  box-shadow: none;
+}
+
+.outlet-banner{
+  background: linear-gradient(135deg, #FAFCFA 0%, #F3F8F3 100%);
+  padding: 45px 20px 30px; 
+  text-align: center;
+  width: 100%;
+  border-bottom: 1px solid #F1F5F1;
+}
+.outlet-banner h1{
+  font-size: 42px; 
+  font-weight: 800;
+  color: #3A6B2F;
+  margin-bottom: 10px; 
+}
+.outlet-banner p{
+  font-size: 16px;
+  color: #4B5563;
+}
+.outlet-section{
+  padding: 45px 20px 70px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.outlet-item{
+  background: white;
+  border-radius: 18px; 
+  padding: 30px; 
+  margin-bottom: 35px; 
+  box-shadow: 0 6px 20px rgba(58,107,47,0.06);
+  border: 1px solid #E5E7EB;
+  transition: 0.3s;
+}
+.outlet-item:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(58,107,47,0.1);
+  border-color: #C5E1A5;
+}
+.outlet-header{
+  margin-bottom: 22px;
+}
+.outlet-number{
+  background: #C5E1A5;
+  color: white;
+  width: 42px; 
+  height: 42px;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  line-height: 42px;
+  font-weight: 700;
+  font-size: 17px;
+  margin-right: 12px;
+}
+.outlet-header h2{
+  font-size: 26px; 
+  font-weight: 700;
+  color: #3A6B2F;
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+}
+.outlet-img img{
+  width: 100%;
+  height: 260px; 
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  margin-bottom: 18px; 
+}
+.info-item{
+  margin-bottom: 20px; 
+}
+.info-item h4{
+  font-size: 14px;
+  font-weight: 700;
+  color: #4f9400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+.info-item p{
+  font-size: 15px;
+  color: #4B5563;
+  line-height: 1.7; 
+  margin: 0;
+}
+.maps-box{
+  margin-top: 18px; 
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #E5E7EB;
+}
+.maps-box iframe{
+  width: 100%;
+  height: 230px; 
+  border: none;
+  display: block;
+}
+.jam-badge{
+  display: inline-block;
+  background: #3A6B2F;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 18px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 6px;
+  margin-top: 4px;
+}
+.footer-kity{
+  background: linear-gradient(135deg, #FAFCFA 0%, #F3F8F3 100%);
+  color: #4B5563;
+  padding: 45px 20px 20px;
+  margin-top: 40px;
+  border-top: 1px solid #E8F0E8;
+  width: 100%;
+  text-align: center;
+}
+.footer-logo{
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 14px;
+  color: #3A6B2F;
+}
+.footer-bottom{
+  border-top: 1px solid #E8F0E8;
+  padding-top: 18px;
+  text-align: center;
+  font-size: 13px;
+  color: #656667;
+}
+
+/* === MOBILE FIX BS3 === */
+@media (max-width: 767px){
+  body{padding-top: 60px}
+  
+  .navbar.navbar-inverse{min-height: 60px}
+  .navbar.navbar-inverse .navbar-brand{height: 60px; line-height: 30px; font-size: 20px}
+  .navbar.navbar-inverse .navbar-nav > li > a{height: auto; line-height: 20px; padding: 15px}
+  .navbar.navbar-inverse .navbar-nav{float: none; margin: 0}
+  .navbar.navbar-inverse .navbar-nav > li{float: none}
+  .navbar.navbar-inverse .navbar-toggle{margin-top: 13px}
+  
+  .outlet-banner{padding: 30px 18px 20px} 
+  .outlet-banner h1{font-size: 26px}
+  .outlet-banner p{font-size: 15px}
+  
+  .outlet-section{padding: 30px 18px 45px} 
+  .outlet-item{padding: 22px 18px; margin-bottom: 22px} 
+  .outlet-header h2{font-size: 20px}
+  .outlet-img img{height: 200px} 
+  .maps-box iframe{height: 180px} 
+  .info-item{margin-bottom: 16px}
+  .col-md-5, .col-md-7{margin-bottom: 15px}}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-menu">
+        <span class="sr-only">Toggle Nav</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">EsNya Kak Ity</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-navbar-menu">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="tentang.html">Tentang</a></li>
+        <li class="active"><a href="outlet.html">Outlet</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="outlet-banner">
+  <h1>Outlet Kami</h1>
+  <p>Mampir ke outlet terdekat ya bestie, segernya langsung diseduh! 😋</p>
+</div>
+
+<div class="outlet-section">
+
+  <div class="outlet-item">
+    <div class="outlet-header">
+      <div class="outlet-number">1</div>
+      <h2>Outlet Pertama</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+        <div class="outlet-img">
+          <img src="tanjungpura.jpg" alt="Outlet Tanjungpura" class="img-responsive">
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="info-item">
+          <h4>Alamat Lengkap</h4>
+          <p>Jl. Kuala Madu<br>Depan Pondok Pesantren Muhammadiyah</p>
+        </div>
+        <div class="info-item">
+          <h4>Jam Buka</h4>
+          <span class="jam-badge">Senin - Minggu</span>
+          <span class="jam-badge">09.00 - 21.00 WIB</span>
+        </div>
+        <div class="info-item">
+          <h4>Lihat di Maps</h4>
+          <div class="maps-box">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.512441066793!2d98.5017858735748!3d3.697679349538819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312b82242e0363%3A0xb9b21b1880bac4c0!2sTOKO%20KAK%20ITY!5e0!3m2!1sid!2sid!4v1782643922879!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="outlet-item">
+    <div class="outlet-header">
+      <div class="outlet-number">2</div>
+      <h2>Outlet Kedua</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+        <div class="outlet-img">
+          <img src="setiabudi.jpg" alt="Outlet Setia Budi" class="img-responsive">
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="info-item">
+          <h4>Alamat Lengkap</h4>
+          <p>Jl. Binjai-Stabat Depan Kampus ITBI<br>Tepatnya Di Depan Bidan Yusmiati/Samping Masjid Al-Ikhlas</p>
+        </div>
+        <div class="info-item">
+          <h4>Jam Buka</h4>
+          <span class="jam-badge">Senin - Minggu</span>
+          <span class="jam-badge">09.00 - 21.00 WIB</span>
+        </div>
+        <div class="info-item">
+          <h4>Lihat di Maps</h4>
+          <div class="maps-box">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.5105791485375!2d98.5056928436889!3d3.6980939222491593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312aca13da600b%3A0x45088e3f7d5ad04b!2sMasjid%20Al-Ikhlas%20(Permai)!5e0!3m2!1sid!2sid!4v1782644698681!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="outlet-item">
+    <div class="outlet-header">
+      <div class="outlet-number">3</div>
+      <h2>Outlet Ketiga</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+        <div class="outlet-img">
+          <img src="ringroad.jpg" alt="Outlet Ring Road" class="img-responsive">
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="info-item">
+          <h4>Alamat Lengkap</h4>
+          <p>Jl. Karang Rejo<br>Depan Teras Alfamart</p>
+        </div>
+        <div class="info-item">
+          <h4>Jam Buka</h4>
+          <span class="jam-badge">Senin - Minggu</span>
+          <span class="jam-badge">09.00 - 21.00 WIB</span>
+        </div>
+        <div class="info-item">
+          <h4>Lihat di Maps</h4>
+          <div class="maps-box">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.4222278833445!2d98.50080127357484!3d3.717713049397487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3036d57ce3e3ffa9%3A0x9006d5857857f662!2sAlfamart%20Karang%20Rejo!5e0!3m2!1sid!2sid!4v1782644893105!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="outlet-item">
+    <div class="outlet-header">
+      <div class="outlet-number">4</div>
+      <h2>Outlet Keempat</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+        <div class="outlet-img">
+          <img src="cemara.jpg" alt="Outlet Cemara" class="img-responsive">
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="info-item">
+          <h4>Alamat Lengkap</h4>
+          <p>Jl. Karang Rejo, Gg Cokro<br>Depan Rumah Belajar Fian (hidden gem)</p>
+        </div>
+        <div class="info-item">
+          <h4>Jam Buka</h4>
+          <span class="jam-badge">Senin - Minggu</span>
+          <span class="jam-badge">09.00 - 21.00 WIB</span>
+        </div>
+        <div class="info-item">
+          <h4>Lihat di Maps</h4>
+          <div class="maps-box">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.4255706199024!2d98.49855807357487!3d3.7169726494027127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3036d5ba61b4fb2d%3A0x21da0c5f53f90b3e!2sRumah%20Belajar%20Fian!5e0!3m2!1sid!2sid!4v1782645033440!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="outlet-item">
+    <div class="outlet-header">
+      <div class="outlet-number">5</div>
+      <h2>Outlet Kelima</h2>
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+        <div class="outlet-img">
+          <img src="aksara.jpg" alt="Outlet Aksara" class="img-responsive">
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="info-item">
+          <h4>Alamat Lengkap</h4>
+          <p>Depan Klinik Asia Medika Tandem<br>Samping Rumah Makan Ambun Pagi</p>
+        </div>
+        <div class="info-item">
+          <h4>Jam Buka</h4>
+          <span class="jam-badge">Senin - Minggu</span>
+          <span class="jam-badge">10.00 - 22.00 WIB</span>
+        </div>
+        <div class="info-item">
+          <h4>Lihat di Maps</h4>
+          <div class="maps-box">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d995.3813032564201!2d98.50729880483587!3d3.694834306778246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312ac8349fdfe1%3A0x1053609493e6510!2sRm%20Ammbun%20Pagi!5e0!3m2!1sid!2sid!4v1782645269003!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="footer-kity">
+  <div class="container footer-grid">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="footer-logo">EsNya Kak Ity</div>
+        <p>Es teh seger 4 ribuan. 100% gula asli, tanpa pengawet, dibuat fresh setiap hari. Dompet aman tenggorokan adem!</p>
+      </div>
+      <div class="col-md-3">
+        <h4>Contact Us</h4>
+        <p><a href="tel:085163007071">📞 Telepon: 0851-6300-7071</a><br>
+        <a href="https://wa.me/6285163007071" target="_blank">📱 WhatsApp: 0851-6300-7071</a><br>
+        <a href="https://www.instagram.com/eskakity" target="_blank">📸 Instagram</a><br>
+        <a href="#" target="_blank">🎵 TikTok</a></p>
+      </div>
+      <div class="col-md-3">
+        <h4>Address</h4>
+        <p>📍 Jl. Kuala Madu<br>Depan Pondok Pesantren<br>Muhammadiyah</p>
+         <a href="https://maps.app.goo.gl/UXwX31VPiWoHEswo9" target="_blank">Lihat Maps</a>
+      </div>
+      <div class="col-md-3">
+        <h4>Jam Buka</h4>
+        <p>Senin - Minggu<br>09.00 - 21.00 WIB</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    Dibuat dengan cinta ❤️ | Es teh paling seger.
+  </div>
+</footer>
+
+<script src="bootstrap/js/jQuery.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

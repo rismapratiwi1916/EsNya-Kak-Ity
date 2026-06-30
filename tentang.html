@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tentang - EsNya Kak Ity</title>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body{
+  padding-top: 70px; /* 70 navbar doang, ga ada announce */
+  background: #FAFCFA;
+  color: #3A6B2F;
+}
+
+/* === NAVBAR BS3 FIX === */
+.navbar-inverse{
+  background: #fff;
+  border: 0;
+  border-bottom: 2px solid #C5E1A5;
+  border-radius: 0;
+  margin-bottom: 0;
+  min-height: 70px;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1030;
+}
+.navbar-inverse .navbar-brand{
+  color: #3A6B2F;
+  font-size: 22px;
+  font-weight: 800;
+  height: 70px;
+  line-height: 40px;
+  padding: 15px;
+}
+.navbar-inverse .navbar-nav > li > a{
+  color: #3A6B2F;
+  font-weight: 500;
+  font-size: 15px;
+  height: 70px;
+  line-height: 40px;
+  padding: 15px 20px;
+}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus{
+  color: #2D5016;
+  background: #F3F8F3;
+}
+.navbar-inverse .navbar-toggle{
+  border-color: #C5E1A5;
+  margin-top: 18px;
+  margin-right: 15px;
+}
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus{
+  background: #F3F8F3;
+}
+.navbar-inverse .navbar-toggle .icon-bar{
+  background: #3A6B2F;
+}
+.navbar-inverse .navbar-collapse{
+  border-top: 0;
+  box-shadow: none;
+}
+
+.hero-about{
+  padding: 50px 20px 60px;
+  background: white;
+}
+.hero-label{
+  font-size: 13px;
+  color: #4B5563;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.hero-content h1{
+  font-size: 46px;
+  font-weight: 700;
+  color: #3A6B2F;
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+.hero-intro{
+  font-size: 16px;
+  color: #4B5563;
+  line-height: 1.8;
+}
+.hero-img img{
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.story-section{
+  padding: 50px 20px 60px;
+  background: white;
+}
+.story-label{
+  font-size: 14px;
+  color: #4B5563;
+  margin-bottom: 12px;
+}
+.story-left h2{
+  font-size: 42px;
+  font-weight: 700;
+  color: #3A6B2F;
+  line-height: 1.2;
+}
+.story-right p{
+  font-size: 16px;
+  color: #4B5563;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+.promo-b2g1{
+  color: #2d6a2d;
+  font-weight: 700;
+  font-size: 20px;
+}
+.section-title{
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #3A6B2F;
+  margin-bottom: 12px;
+  padding-top: 40px;
+}
+.section-title span{
+  color: #C5E1A5;
+}
+.section-desc{
+  text-align: center;
+  font-size: 16px;
+  color: #4B5563;
+  max-width: 700px;
+  margin: 0 auto 35px;
+  line-height: 1.8;
+}
+.feature-card{
+  background: #FAFCFA;
+  padding: 28px 20px;
+  border-radius: 16px;
+  text-align: center;
+  border: 1px solid #E5E7EB;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+.feature-icon{
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+.feature-card h3{
+  font-size: 18px;
+  font-weight: 700;
+  color: #3A6B2F;
+  margin-bottom: 8px;
+}
+.feature-card p{
+  font-size: 14px;
+  color: #4B5563;
+  line-height: 1.7;
+  margin: 0;
+}
+.hal-section{
+  padding: 60px 20px;
+  background: #FAFCFA;
+  margin-top: 40px;
+}
+.hal-label{
+  font-size: 14px;
+  color: #4B5563;
+  margin-bottom: 12px;
+}
+.hal-title{
+  font-size: 42px;
+  font-weight: 700;
+  color: #3A6B2F;
+  line-height: 1.2;
+  margin: 0;
+}
+.hal-text{
+  font-size: 16px;
+  color: #4B5563;
+  line-height: 1.8;
+  margin: 0;
+  padding-top: 20px;
+}
+.img-halal {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid #e9e9e9;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+  display: block;
+  margin: 25px auto 0 auto;
+}
+.footer-kity{
+  background: linear-gradient(135deg, #FAFCFA 0%, #F3F8F3 100%);
+  color: #4B5563;
+  padding: 45px 20px 20px;
+  margin-top: 40px;
+  border-top: 1px solid #E8F0E8;
+  width: 100%;
+  text-align: center;
+}
+.footer-logo{
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 14px;
+  color: #3A6B2F;
+}
+.footer-bottom{
+  border-top: 1px solid #E8F0E8;
+  padding-top: 18px;
+  text-align: center;
+  font-size: 13px;
+  color: #656667;
+}
+@media (max-width: 767px){
+  body{padding-top: 60px}
+  
+  /* INI CSS HP YG BENER */
+  .navbar.navbar-inverse{min-height: 60px}
+  .navbar.navbar-inverse .navbar-brand{height: 60px; line-height: 30px; font-size: 20px}
+  .navbar.navbar-inverse .navbar-nav > li > a{height: auto; line-height: 20px; padding: 15px}
+  .navbar.navbar-inverse .navbar-nav{float: none; margin: 0}
+  .navbar.navbar-inverse .navbar-nav > li{float: none}
+  .navbar.navbar-inverse .navbar-toggle{margin-top: 13px}
+  
+  .hero-about{padding: 35px 18px 45px}
+  .hero-content h1{font-size: 32px; margin-bottom: 14px}
+  .hero-intro{font-size: 15px}
+  .hero-img img{height: 240px}
+  
+  .story-section{padding: 35px 18px 45px}
+  .story-left h2{font-size: 28px; margin-bottom: 15px}
+  .story-right p{font-size: 15px; margin-bottom: 15px}
+  
+  .section-title{font-size: 26px; padding-top: 35px; margin-bottom: 10px}
+  .section-desc{font-size: 15px; margin-bottom: 25px}
+  .feature-card{padding: 22px 18px; margin-bottom: 15px}
+  .feature-icon{font-size: 32px}
+  .col-md-3{margin-bottom: 15px}
+  
+  .hal-section{padding: 40px 18px; margin-top: 45px;}
+  .hal-title{font-size: 28px; margin-bottom: 12px}
+  .hal-text{padding-top: 12px; font-size: 15px}
+
+  .img-halal{max-width: 320px; margin-top: 20px;}
+
+  .footer-kity{padding: 35px 18px 18px; margin-top: 35px}
+  .footer-logo{font-size: 22px}}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-menu">
+        <span class="sr-only">Toggle Nav</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">EsNya Kak Ity</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-navbar-menu">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li class="active"><a href="tentang.html">Tentang</a></li>
+        <li><a href="outlet.html">Outlet</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="hero-about">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-push-6">
+        <div class="hero-content">
+          <div class="hero-label">Tentang EsNya Kak Ity</div>
+          <h1>Cerita Kita</h1>
+          <p class="hero-intro">Dari gerobak 2023 sampai sekarang. Ini cerita kita, dari dapur rumah ke cup kalian 💚.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-md-pull-6">
+        <div class="hero-img">
+          <img src="owner.jpeg" alt="EsNya Kak Ity">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="story-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="story-left">
+          <div class="story-label">Cerita Kita</div>
+          <h2>Segernya beda, ceritanya nyata</h2>
+        </div>
+      </div>
+      <div class="col-md-7">
+        <div class="story-right">
+          <p><b>EsNya Kak Ity...</b></p>
+
+          <p>Awalnya kita mau <i>girls time</i> ke Stabat bersama teman-teman, lalu singgah ke salah satu outlet es teh. 
+          Hari itu hari Jumat, "Bang, beli 2 ya es-nya." Dibuatkanlah pesanannya, eh kok diantar 3? Ternyata ada promo 
+          beli 2 gratis 1 setiap Jumat.</p>
+
+          <p>Dari situlah muncul ide, "Jualan es teh aja kali ya." Terus kami ngobrol dari A-Z, akhirnya <i>fix</i> 
+            jualan es teh. Karena saya juga seorang IRT yang sudah stop karier dan ingin punya kegiatan, ya sudah, jualan es
+            es teh saja.</p>
+
+          <p>Outlet pertama dibuka 17 November 2023, jualan depan rumah pakai gerobak + termos besar di hari Jumat. 
+            Awalnya yang beli memang cuma kerabat dan tetangga. Selama 40 hari merintis, benar-benar belum 
+            ada pembeli dan belum dapat pelanggan. Tapi Kak Ity yakin ada jalan rezeki di sini. Tidak pernah 
+            berhenti sedekah setiap Jum'at ke masjid terdekat, dan promo kami setiap Jum'at konsisten sampai sekarang.
+          </p>
+
+          <p class="promo-b2g1">"BUY TWO GET ONE FREE"</p>
+
+          <p>yang awalnya cuma iseng "girls time", sekarang malah jadi kerjaan tiap hari. Alhamdulillah.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h2 class="section-title">Kenapa <span>EsNya Kak Ity</span>?</h2>
+  <p class="section-desc">Karena kami pake bahan pilihan + resep yg dijaga konsistensinya. Setiap tegukan harus tetap seger nagih.</p>
+  
+  <div class="row">
+    <div class="col-md-3"><div class="feature-card"><div class="feature-icon">🍃</div><h3>Racikan Khusus</h3><p>Resep racikan Kak Ity sendiri. Teh + Rempah diseduh pas. Hasilnya aroma kuat dan rasa seimbang.</p></div></div>
+    <div class="col-md-3"><div class="feature-card"><div class="feature-icon">💯</div><h3>Gula Asli 100%</h3><p>Manisnya natural dari gula asli. Ga pake pemanis buatan, aman buat yang jaga kesehatan.</p></div></div>
+    <div class="col-md-3"><div class="feature-card"><div class="feature-icon">❄️</div><h3>Rasa Khas</h3><p>Memiliki rasa khas dan seger yang tidak sama dengan teh yang lain. Sekali nyobain pasti ketagihan.</p></div></div>
+    <div class="col-md-3"><div class="feature-card"><div class="feature-icon">💰</div><h3>Higienis Terjamin</h3><p>Dibuat fresh setiap hari, tempat bersih, alat steril, tangan bersih. Kebersihan no 1, rasa no 2.</p></div></div>
+  </div>
+</div>
+
+<div class="hal-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="hal-label">Tentang Produk</div>
+        <h2 class="hal-title">Tersertifikasi<br>Halal</h2>
+      </div>
+      <div class="col-md-7">
+        <p class="hal-text">EsNya Kak Ity tersertifikasi Halal Grade A oleh MUI dengan nomor sertifikat <b>LPPOM-00160233461223</b>. Kami menjunjung standar tinggi dalam pembuatan dan penyajian produk dengan 100% bahan Halal.</p>
+      
+        <img src="owner.jpeg" alt="sertifikat halal" class="img-responsive img-halal">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<footer class="footer-kity">
+  <div class="container footer-grid">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="footer-logo">EsNya Kak Ity</div>
+        <p>Es teh seger 4 ribuan. 100% gula asli, tanpa pengawet, dibuat fresh setiap hari. Dompet aman tenggorokan adem!</p>
+      </div>
+      
+      <div class="col-md-3">
+  <h4>Contact Us</h4>
+  
+  <a href="tel:085163007071">📞 Telepon: 0851-6300-7071</a><br>
+  
+  <a href="https://wa.me/6285163007071" target="_blank">📱 WhatsApp: 0851-6300-7071</a><br>
+  
+  <a href="https://www.instagram.com/eskakity?igsh=MXZuYjR2Mjc2Nms4" target="_blank">📸 Instagram</a><br>
+  
+  <a href="https://www.tiktok.com/@estehjumbokakty/video/7462703537919675654?is_from_webapp=1&sender_device=pc&web_id=7628201488740812304" target="_blank">🎵 TikTok</a>
+
+</div>
+      
+      <div class="col-md-3">
+        <h4>Address</h4>
+        <p>📍 Jl. Kuala Madu<br>Depan Pondok Pesantren<br>Muhammadiyah</p>
+         <a href="https://maps.app.goo.gl/UXwX31VPiWoHEswo9" target="_blank">Lihat Maps</a>
+      </div>
+      
+      <div class="col-md-3">
+        <h4>Jam Buka</h4>
+        <p>Senin - Minggu<br>09.00 - 21.00 WIB</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    Dibuat dengan cinta ❤️ | Es teh paling seger.
+  </div>
+</footer>
+
+<script src="bootstrap/js/jQuery.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
