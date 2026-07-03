@@ -6,15 +6,19 @@
 <title>Kontak & Order - EsNya Kak Ity</title>
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
 body{
-  padding-top: 70px; /* 70 navbar doang, ga ada announce */
+  padding-top: 112px; 
   background: #FAFCFA;
   color: #3A6B2F;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* === NAVBAR BS3 FIX === */
-.navbar-inverse{
+.nav-my{
   background: #fff;
   border: 0;
   border-bottom: 2px solid #C5E1A5;
@@ -25,7 +29,7 @@ body{
   top: 0; left: 0; right: 0;
   z-index: 1030;
 }
-.navbar-inverse .navbar-brand{
+.nav-my .navbar-brand{
   color: #3A6B2F;
   font-size: 22px;
   font-weight: 800;
@@ -33,7 +37,7 @@ body{
   line-height: 40px;
   padding: 15px;
 }
-.navbar-inverse .navbar-nav > li > a{
+.nav-my .navbar-nav > li > a{
   color: #3A6B2F;
   font-weight: 500;
   font-size: 15px;
@@ -41,59 +45,60 @@ body{
   line-height: 40px;
   padding: 15px 20px;
 }
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > li > a:hover,
-.navbar-inverse .navbar-nav > li > a:focus{
+.nav-my .navbar-nav > .active > a,
+.nav-my .navbar-nav > li > a:hover{
   color: #2D5016;
   background: #F3F8F3;
 }
-.navbar-inverse .navbar-toggle{
+.nav-my .navbar-toggle{
   border-color: #C5E1A5;
   margin-top: 18px;
   margin-right: 15px;
 }
-.navbar-inverse .navbar-toggle:hover,
-.navbar-inverse .navbar-toggle:focus{
-  background: #F3F8F3;
-}
-.navbar-inverse .navbar-toggle .icon-bar{
+.nav-my .navbar-toggle .icon-bar{
   background: #3A6B2F;
 }
-.navbar-inverse .navbar-collapse{
-  border-top: 0;
-  box-shadow: none;
+
+.nav-my .navbar-nav > li.active > a,
+.nav-my .navbar-nav > li > a:hover,
+.nav-my .navbar-nav > li > a:focus {
+  background-color: transparent;
+  color: #2D5016;
+  font-weight: 700;
+  border-bottom: 3px solid #3A6B2F;
 }
 
-.kontak-banner{
+.banner-kontak{
   background: linear-gradient(135deg, #FAFCFA 0%, #F3F8F3 100%);
   padding: 45px 20px 30px;
   text-align: center;
   width: 100%;
   border-bottom: 1px solid #F1F5F1;
+  margin-top: -42px; 
 }
-.kontak-banner h1{
+.banner-kontak h1{
   font-size: 42px; 
   font-weight: 800;
   color: #3A6B2F;
   margin-bottom: 10px;
 }
-.kontak-banner p{
+.banner-kontak p{
   font-size: 16px;
   color: #4B5563;
 }
-.order-section{
+.bagian-order{
   padding: 45px 20px 60px; 
   max-width: 1100px;
   margin: 0 auto;
 }
-.section-title{
+.judul-seksi{
   font-size: 32px; 
   font-weight: 800;
   color: #3A6B2F;
   text-align: center;
   margin-bottom: 30px; 
 }
-.order-card{
+.kartu-order{
   background: white;
   border-radius: 18px; 
   padding: 30px 25px; 
@@ -105,26 +110,26 @@ body{
   display: flex;
   flex-direction: column;
 }
-.order-card:hover{
+.kartu-order:hover{
   border-color: #C5E1A5;
   box-shadow: 0 10px 25px rgba(58,107,47,0.08);
   transform: translateY(-4px);
 }
-.order-icon{font-size: 48px; margin-bottom: 14px} 
-.order-card h3{
+.icon-order{font-size: 48px; margin-bottom: 14px} 
+.kartu-order h3{
   font-size: 20px; 
   font-weight: 700;
   color: #3A6B2F;
   margin-bottom: 10px;
 }
-.order-card p{
+.kartu-order p{
   font-size: 15px;
   color: #4B5563;
   margin-bottom: 18px; 
   line-height: 1.7;
   flex-grow: 1;
 }
-.btn-order{
+.tombol-order{
   display: inline-block;
   color: white;
   padding: 12px 32px;
@@ -137,39 +142,39 @@ body{
   background: #00AA13;
   margin-top: auto;
 }
-.btn-order:hover{
+.tombol-order:hover{
   transform: translateY(-2px);
   color: white;
   text-decoration: none;
   box-shadow: 0 6px 15px rgba(0,0,0,0.12);
 }
-.info-box{
+.kotak-info{
   background: white;
   border-radius: 18px; 
   padding: 30px 28px; 
   margin-bottom: 35px; 
   border: 1px solid #E5E7EB;
 }
-.info-box h3{
+.kotak-info h3{
   font-size: 22px; 
   font-weight: 700;
   color: #3A6B2F;
   margin-bottom: 22px; 
   text-align: center;
 }
-.info-item{text-align: center; margin-bottom: 18px} 
-.info-item h4{
+.item-info{text-align: center; margin-bottom: 18px} 
+.item-info h4{
   font-size: 15px;
   font-weight: 700;
   color: #3A6B2F;
   margin-bottom: 6px;
 }
-.info-item p{
+.item-info p{
   font-size: 14px; 
   color: #4B5563;
   margin: 0
 }
-.footer-kity{
+.bawah-footer{
   background: linear-gradient(135deg, #FAFCFA 0%, #F3F8F3 100%);
   color: #4B5563;
   padding: 45px 20px 20px;
@@ -178,13 +183,13 @@ body{
   width: 100%;
   text-align: center;
 }
-.footer-logo{
+.logo-bawah{
   font-size: 24px;
   font-weight: 800;
   margin-bottom: 14px;
   color: #3A6B2F;
 }
-.footer-bottom{
+.copy-bawah{
   border-top: 1px solid #E8F0E8;
   padding-top: 18px;
   text-align: center;
@@ -192,35 +197,35 @@ body{
   color: #656667;
 }
 
-/* === MOBILE FIX BS3 === */
 @media (max-width: 767px){
   body{padding-top: 60px}
-  
   .navbar.navbar-inverse{min-height: 60px}
   .navbar.navbar-inverse .navbar-brand{height: 60px; line-height: 30px; font-size: 20px}
   .navbar.navbar-inverse .navbar-nav > li > a{height: auto; line-height: 20px; padding: 15px}
   .navbar.navbar-inverse .navbar-nav{float: none; margin: 0}
   .navbar.navbar-inverse .navbar-nav > li{float: none}
-  .navbar.navbar-inverse .navbar-toggle{margin-top: 13px}
   
-  .kontak-banner{padding: 30px 18px 20px}
-  .kontak-banner h1{font-size: 28px}
-  .kontak-banner p{font-size: 15px}
+  .banner-kontak{
+    padding: 30px 18px 20px;
+    margin-top: -0px; 
+  }
+  .banner-kontak h1{font-size: 28px}
+  .banner-kontak p{font-size: 15px}
   
-  .order-section{padding: 30px 18px 45px}
-  .section-title{font-size: 24px; margin-bottom: 22px}
+  .bagian-order{padding: 30px 18px 45px}
+  .judul-seksi{font-size: 24px; margin-bottom: 22px}
   
-  .order-card{padding: 24px 18px; margin-bottom: 16px; min-height: auto}
-  .order-icon{font-size: 38px}
-  .order-card h3{font-size: 19px}
+  .kartu-order{padding: 24px 18px; margin-bottom: 16px; min-height: auto}
+  .icon-order{font-size: 38px}
+  .kartu-order h3{font-size: 19px}
   
-  .info-box{padding: 24px 18px; margin-bottom: 25px}
+  .kotak-info{padding: 24px 18px; margin-bottom: 25px}
   .col-md-4, .col-md-6{margin-bottom: 15px}}
 </style>
 </head>
 <body>
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar nav-my">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-menu">
@@ -243,52 +248,52 @@ body{
   </div>
 </nav>
 
-<div class="kontak-banner">
+<div class="banner-kontak">
   <h1>Order Sekarang</h1>
   <p>Segernya tinggal klik bestie. Pilih cara paling gampang ya 😋</p>
 </div>
 
-<div class="order-section">
+<div class="bagian-order">
   
-  <h2 class="section-title">Pesan Lewat Mana?</h2>
+  <h2 class="judul-seksi">Pesan Lewat Mana?</h2>
   <div class="row">
     <div class="col-md-4">
-      <div class="order-card">
-        <span class="order-icon">📱</span>
+      <div class="kartu-order">
+        <span class="icon-order">📱</span>
         <h3>WhatsApp</h3>
         <p>Chat langsung ke admin. Respon cepat + COD tersedia</p>
-        <a href="https://wa.me/6285163007071?text=Halo%20Kak%20Ity" target="_blank" class="btn-order">Chat Sekarang</a>
+        <a href="https://wa.me/6285163007071?text=Halo%20Kak%20Ity" target="_blank" class="tombol-order">Chat Sekarang</a>
       </div>
     </div>
     <div class="col-md-4">
-      <div class="order-card">
-        <span class="order-icon">🛵</span>
+      <div class="kartu-order">
+        <span class="icon-order">🛵</span>
         <h3>GoFood</h3>
         <p>Cari "EsNya Kak Ity" di Gojek. Ada voucher + ongkir murah setiap hari</p>
-        <a href="https://gofood.co.id/id/medan/restaurant/esnya-kak-ity-f830f078-ecbb-4ee9-9858-9c2b0e968eb2" target="_blank" class="btn-order">Buka GoFood</a>
+        <a href="https://gofood.co.id/id/medan/restaurant/esnya-kak-ity-f830f078-ecbb-4ee9-9858-9c2b0e968eb2" target="_blank" class="tombol-order">Buka GoFood</a>
       </div>
     </div>
     <div class="col-md-4">
-      <div class="order-card">
-        <span class="order-icon">🛵</span>
+      <div class="kartu-order">
+        <span class="icon-order">🛵</span>
         <h3>Datang Langsung</h3>
         <p>Mampir ke outlet terdekat. Buy 2 Get 1 Free setiap Jumat</p>
-        <a href="outlet.html" class="btn-order">Lihat Outlet</a>
+        <a href="outlet.html" class="tombol-order">Lihat Outlet</a>
       </div>
     </div>
   </div>
 
-  <div class="info-box">
+  <div class="kotak-info">
     <h3>Ada kritik atau saran bestie?</h3>
     <div class="row">
       <div class="col-md-6">
-        <div class="info-item">
+        <div class="item-info">
           <h4>Datang ke outlet</h4>
           <a href="https://maps.app.goo.gl/UXwX31VPiWoHEswo9" target="_blank">📍Outlet Pusat</a>
         </div>
       </div>
       <div class="col-md-6">
-        <div class="info-item">
+        <div class="item-info">
           <h4>WhatsApp admin</h4>
           <a href="https://wa.me/6285163007071" target="_blank">0851-6300-7071</a>
         </div>
@@ -297,11 +302,11 @@ body{
   </div>
 </div>
 
-<footer class="footer-kity">
+<footer class="bawah-footer">
   <div class="container footer-grid">
     <div class="row">
       <div class="col-md-3">
-        <div class="footer-logo">EsNya Kak Ity</div>
+        <div class="logo-bawah">EsNya Kak Ity</div>
         <p>Es teh seger 4 ribuan. 100% gula asli, tanpa pengawet, dibuat fresh setiap hari. Dompet aman tenggorokan adem!</p>
       </div>
       <div class="col-md-3">
@@ -322,7 +327,7 @@ body{
       </div>
     </div>
   </div>
-  <div class="footer-bottom">
+  <div class="copy-bawah">
     Dibuat dengan cinta ❤️ | Es teh paling seger.
   </div>
 </footer>

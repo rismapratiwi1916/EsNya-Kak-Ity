@@ -6,15 +6,19 @@
 <title>Tentang - EsNya Kak Ity</title>
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
 body{
-  padding-top: 70px; /* 70 navbar doang, ga ada announce */
+  padding-top: 112px; 
   background: #FAFCFA;
   color: #3A6B2F;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* === NAVBAR BS3 FIX === */
-.navbar-inverse{
+.nav-my{
   background: #fff;
   border: 0;
   border-bottom: 2px solid #C5E1A5;
@@ -25,7 +29,7 @@ body{
   top: 0; left: 0; right: 0;
   z-index: 1030;
 }
-.navbar-inverse .navbar-brand{
+.nav-my .navbar-brand{
   color: #3A6B2F;
   font-size: 22px;
   font-weight: 800;
@@ -33,7 +37,7 @@ body{
   line-height: 40px;
   padding: 15px;
 }
-.navbar-inverse .navbar-nav > li > a{
+.nav-my .navbar-nav > li > a{
   color: #3A6B2F;
   font-weight: 500;
   font-size: 15px;
@@ -41,75 +45,72 @@ body{
   line-height: 40px;
   padding: 15px 20px;
 }
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > li > a:hover,
-.navbar-inverse .navbar-nav > li > a:focus{
-  color: #2D5016;
-  background: #F3F8F3;
-}
-.navbar-inverse .navbar-toggle{
+
+.nav-my .navbar-toggle{
   border-color: #C5E1A5;
   margin-top: 18px;
   margin-right: 15px;
 }
-.navbar-inverse .navbar-toggle:hover,
-.navbar-inverse .navbar-toggle:focus{
-  background: #F3F8F3;
-}
-.navbar-inverse .navbar-toggle .icon-bar{
+
+.nav-my .navbar-toggle .icon-bar{
   background: #3A6B2F;
 }
-.navbar-inverse .navbar-collapse{
-  border-top: 0;
-  box-shadow: none;
+
+.nav-my .navbar-nav > li.active > a,
+.nav-my .navbar-nav > li > a:hover,
+.nav-my .navbar-nav > li > a:focus {
+  background-color: transparent;
+  color: #2D5016;
+  font-weight: 700;
+  border-bottom: 3px solid #3A6B2F;
 }
 
-.hero-about{
-  padding: 50px 20px 60px;
+.hero-tentang{
+  padding: 20px 20px 60px; 
   background: white;
+  margin-top: -42px; 
 }
-.hero-label{
+.label-hero{
   font-size: 13px;
   color: #4B5563;
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-bottom: 15px;
 }
-
-.hero-content h1{
+.isi-hero h1{
   font-size: 46px;
   font-weight: 700;
   color: #3A6B2F;
   margin-bottom: 18px;
   line-height: 1.2;
 }
-.hero-intro{
+.teks-hero{
   font-size: 16px;
   color: #4B5563;
   line-height: 1.8;
 }
-.hero-img img{
+.gambar-hero img{
   width: 100%;
   height: 420px;
   object-fit: cover;
   border-radius: 16px;
 }
-.story-section{
+.bagian-cerita{
   padding: 50px 20px 60px;
   background: white;
 }
-.story-label{
+.label-cerita{
   font-size: 14px;
   color: #4B5563;
   margin-bottom: 12px;
 }
-.story-left h2{
+.kiri-cerita h2{
   font-size: 42px;
   font-weight: 700;
   color: #3A6B2F;
   line-height: 1.2;
 }
-.story-right p{
+.kanan-cerita p{
   font-size: 16px;
   color: #4B5563;
   line-height: 1.8;
@@ -120,7 +121,7 @@ body{
   font-weight: 700;
   font-size: 20px;
 }
-.section-title{
+.judul-seksi{
   text-align: center;
   font-size: 32px;
   font-weight: 700;
@@ -128,10 +129,10 @@ body{
   margin-bottom: 12px;
   padding-top: 40px;
 }
-.section-title span{
+.judul-seksi span{
   color: #C5E1A5;
 }
-.section-desc{
+.deskripsi-seksi{
   text-align: center;
   font-size: 16px;
   color: #4B5563;
@@ -139,7 +140,7 @@ body{
   margin: 0 auto 35px;
   line-height: 1.8;
 }
-.feature-card{
+.kartu-unggulan{
   background: #FAFCFA;
   padding: 28px 20px;
   border-radius: 16px;
@@ -148,47 +149,47 @@ body{
   margin-bottom: 20px;
   transition: 0.3s;
 }
-.feature-icon{
+.icon-unggulan{
   font-size: 38px;
   margin-bottom: 12px;
 }
-.feature-card h3{
+.kartu-unggulan h3{
   font-size: 18px;
   font-weight: 700;
   color: #3A6B2F;
   margin-bottom: 8px;
 }
-.feature-card p{
+.kartu-unggulan p{
   font-size: 14px;
   color: #4B5563;
   line-height: 1.7;
   margin: 0;
 }
-.hal-section{
+.bagian-halal{
   padding: 60px 20px;
   background: #FAFCFA;
   margin-top: 40px;
 }
-.hal-label{
+.label-halal{
   font-size: 14px;
   color: #4B5563;
   margin-bottom: 12px;
 }
-.hal-title{
+.judul-halal{
   font-size: 42px;
   font-weight: 700;
   color: #3A6B2F;
   line-height: 1.2;
   margin: 0;
 }
-.hal-text{
+.teks-halal{
   font-size: 16px;
   color: #4B5563;
   line-height: 1.8;
   margin: 0;
   padding-top: 20px;
 }
-.img-halal {
+.gambar-halal {
   max-width: 400px;
   width: 100%;
   height: auto;
@@ -198,7 +199,7 @@ body{
   display: block;
   margin: 25px auto 0 auto;
 }
-.footer-kity{
+.bawah-footer{
   background: linear-gradient(135deg, #FAFCFA 0%, #F3F8F3 100%);
   color: #4B5563;
   padding: 45px 20px 20px;
@@ -207,13 +208,13 @@ body{
   width: 100%;
   text-align: center;
 }
-.footer-logo{
+.logo-bawah{
   font-size: 24px;
   font-weight: 800;
   margin-bottom: 14px;
   color: #3A6B2F;
 }
-.footer-bottom{
+.copy-bawah{
   border-top: 1px solid #E8F0E8;
   padding-top: 18px;
   text-align: center;
@@ -222,43 +223,38 @@ body{
 }
 @media (max-width: 767px){
   body{padding-top: 60px}
-  
-  /* INI CSS HP YG BENER */
   .navbar.navbar-inverse{min-height: 60px}
   .navbar.navbar-inverse .navbar-brand{height: 60px; line-height: 30px; font-size: 20px}
   .navbar.navbar-inverse .navbar-nav > li > a{height: auto; line-height: 20px; padding: 15px}
   .navbar.navbar-inverse .navbar-nav{float: none; margin: 0}
   .navbar.navbar-inverse .navbar-nav > li{float: none}
-  .navbar.navbar-inverse .navbar-toggle{margin-top: 13px}
   
-  .hero-about{padding: 35px 18px 45px}
-  .hero-content h1{font-size: 32px; margin-bottom: 14px}
-  .hero-intro{font-size: 15px}
-  .hero-img img{height: 240px}
+  .hero-tentang{padding: 40px 18px 45px; margin-top: -0px} 
+  .isi-hero h1{font-size: 32px; margin-bottom: 14px}
+  .teks-hero{font-size: 15px}
+  .gambar-hero img{height: 240px}
   
-  .story-section{padding: 35px 18px 45px}
-  .story-left h2{font-size: 28px; margin-bottom: 15px}
-  .story-right p{font-size: 15px; margin-bottom: 15px}
+  .bagian-cerita{padding: 35px 18px 45px}
+  .kiri-cerita h2{font-size: 28px; margin-bottom: 15px}
+  .kanan-cerita p{font-size: 15px; margin-bottom: 15px}
   
-  .section-title{font-size: 26px; padding-top: 35px; margin-bottom: 10px}
-  .section-desc{font-size: 15px; margin-bottom: 25px}
-  .feature-card{padding: 22px 18px; margin-bottom: 15px}
-  .feature-icon{font-size: 32px}
+  .judul-seksi{font-size: 26px; padding-top: 35px; margin-bottom: 10px}
+  .deskripsi-seksi{font-size: 15px; margin-bottom: 25px}
+  .kartu-unggulan{padding: 22px 18px; margin-bottom: 15px}
+  .icon-unggulan{font-size: 32px}
   .col-md-3{margin-bottom: 15px}
   
-  .hal-section{padding: 40px 18px; margin-top: 45px;}
-  .hal-title{font-size: 28px; margin-bottom: 12px}
-  .hal-text{padding-top: 12px; font-size: 15px}
-
-  .img-halal{max-width: 320px; margin-top: 20px;}
-
-  .footer-kity{padding: 35px 18px 18px; margin-top: 35px}
-  .footer-logo{font-size: 22px}}
+  .bagian-halal{padding: 40px 18px; margin-top: 45px;}
+  .judul-halal{font-size: 28px; margin-bottom: 12px}
+  .teks-halal{padding-top: 12px; font-size: 15px}
+  .gambar-halal{max-width: 320px; margin-top: 20px;}
+  .bawah-footer{padding: 35px 18px 18px; margin-top: 35px}
+  .logo-bawah{font-size: 22px}}
 </style>
 </head>
 <body>
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar nav-my">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-menu">
@@ -281,18 +277,18 @@ body{
   </div>
 </nav>
 
-<div class="hero-about">
+<div class="hero-tentang">
   <div class="container">
     <div class="row">
       <div class="col-md-6 col-md-push-6">
-        <div class="hero-content">
-          <div class="hero-label">Tentang EsNya Kak Ity</div>
+        <div class="isi-hero">
+          <div class="label-hero">Tentang EsNya Kak Ity</div>
           <h1>Cerita Kita</h1>
-          <p class="hero-intro">Dari gerobak 2023 sampai sekarang. Ini cerita kita, dari dapur rumah ke cup kalian 💚.</p>
+          <p class="teks-hero">Dari gerobak 2023 sampai sekarang. Ini cerita kita, dari dapur rumah ke cup kalian 💚.</p>
         </div>
       </div>
       <div class="col-md-6 col-md-pull-6">
-        <div class="hero-img">
+        <div class="gambar-hero">
           <img src="owner.jpeg" alt="EsNya Kak Ity">
         </div>
       </div>
@@ -300,17 +296,17 @@ body{
   </div>
 </div>
 
-<div class="story-section">
+<div class="bagian-cerita">
   <div class="container">
     <div class="row">
       <div class="col-md-5">
-        <div class="story-left">
-          <div class="story-label">Cerita Kita</div>
+        <div class="kiri-cerita">
+          <div class="label-cerita">Cerita Kita</div>
           <h2>Segernya beda, ceritanya nyata</h2>
         </div>
       </div>
       <div class="col-md-7">
-        <div class="story-right">
+        <div class="kanan-cerita">
           <p><b>EsNya Kak Ity...</b></p>
 
           <p>Awalnya kita mau <i>girls time</i> ke Stabat bersama teman-teman, lalu singgah ke salah satu outlet es teh. 
@@ -338,59 +334,53 @@ body{
 </div>
 
 <div class="container">
-  <h2 class="section-title">Kenapa <span>EsNya Kak Ity</span>?</h2>
-  <p class="section-desc">Karena kami pake bahan pilihan + resep yg dijaga konsistensinya. Setiap tegukan harus tetap seger nagih.</p>
+  <h2 class="judul-seksi">Kenapa <span>EsNya Kak Ity</span>?</h2>
+  <p class="deskripsi-seksi">Karena kami pake bahan pilihan + resep yg dijaga konsistensinya. Setiap tegukan harus tetap seger nagih.</p>
   
   <div class="row">
-    <div class="col-md-3"><div class="feature-card"><div class="feature-icon">🍃</div><h3>Racikan Khusus</h3><p>Resep racikan Kak Ity sendiri. Teh + Rempah diseduh pas. Hasilnya aroma kuat dan rasa seimbang.</p></div></div>
-    <div class="col-md-3"><div class="feature-card"><div class="feature-icon">💯</div><h3>Gula Asli 100%</h3><p>Manisnya natural dari gula asli. Ga pake pemanis buatan, aman buat yang jaga kesehatan.</p></div></div>
-    <div class="col-md-3"><div class="feature-card"><div class="feature-icon">❄️</div><h3>Rasa Khas</h3><p>Memiliki rasa khas dan seger yang tidak sama dengan teh yang lain. Sekali nyobain pasti ketagihan.</p></div></div>
-    <div class="col-md-3"><div class="feature-card"><div class="feature-icon">💰</div><h3>Higienis Terjamin</h3><p>Dibuat fresh setiap hari, tempat bersih, alat steril, tangan bersih. Kebersihan no 1, rasa no 2.</p></div></div>
+    <div class="col-md-3"><div class="kartu-unggulan"><div class="icon-unggulan">🍃</div><h3>Racikan Khusus</h3><p>Resep racikan Kak Ity sendiri. Teh + Rempah diseduh pas. Hasilnya aroma kuat dan rasa seimbang.</p></div></div>
+    <div class="col-md-3"><div class="kartu-unggulan"><div class="icon-unggulan">💯</div><h3>Gula Asli 100%</h3><p>Manisnya natural dari gula asli. Ga pake pemanis buatan, aman buat yang jaga kesehatan.</p></div></div>
+    <div class="col-md-3"><div class="kartu-unggulan"><div class="icon-unggulan">❄️</div><h3>Rasa Khas</h3><p>Memiliki rasa khas dan seger yang tidak sama dengan teh yang lain. Sekali nyobain pasti ketagihan.</p></div></div>
+    <div class="col-md-3"><div class="kartu-unggulan"><div class="icon-unggulan">💰</div><h3>Higienis Terjamin</h3><p>Dibuat fresh setiap hari, tempat bersih, alat steril, tangan bersih. Kebersihan no 1, rasa no 2.</p></div></div>
   </div>
 </div>
 
-<div class="hal-section">
+<div class="bagian-halal">
   <div class="container">
     <div class="row">
       <div class="col-md-5">
-        <div class="hal-label">Tentang Produk</div>
-        <h2 class="hal-title">Tersertifikasi<br>Halal</h2>
+        <div class="label-halal">Tentang Produk</div>
+        <h2 class="judul-halal">Tersertifikasi<br>Halal</h2>
       </div>
       <div class="col-md-7">
-        <p class="hal-text">EsNya Kak Ity tersertifikasi Halal Grade A oleh MUI dengan nomor sertifikat <b>LPPOM-00160233461223</b>. Kami menjunjung standar tinggi dalam pembuatan dan penyajian produk dengan 100% bahan Halal.</p>
+        <p class="teks-halal">EsNya Kak Ity tersertifikasi Halal Grade A oleh MUI dengan nomor sertifikat <b>LPPOM-00160233461223</b>. Kami menjunjung standar tinggi dalam pembuatan dan penyajian produk dengan 100% bahan Halal.</p>
       
-        <img src="owner.jpeg" alt="sertifikat halal" class="img-responsive img-halal">
+        <img src="owner.jpeg" alt="sertifikat halal" class="img-responsive gambar-halal">
       </div>
     </div>
   </div>
 </div>
 
-
-<footer class="footer-kity">
+<footer class="bawah-footer">
   <div class="container footer-grid">
     <div class="row">
       <div class="col-md-3">
-        <div class="footer-logo">EsNya Kak Ity</div>
+        <div class="logo-bawah">EsNya Kak Ity</div>
         <p>Es teh seger 4 ribuan. 100% gula asli, tanpa pengawet, dibuat fresh setiap hari. Dompet aman tenggorokan adem!</p>
       </div>
       
       <div class="col-md-3">
-  <h4>Contact Us</h4>
-  
-  <a href="tel:085163007071">📞 Telepon: 0851-6300-7071</a><br>
-  
-  <a href="https://wa.me/6285163007071" target="_blank">📱 WhatsApp: 0851-6300-7071</a><br>
-  
-  <a href="https://www.instagram.com/eskakity?igsh=MXZuYjR2Mjc2Nms4" target="_blank">📸 Instagram</a><br>
-  
-  <a href="https://www.tiktok.com/@estehjumbokakty/video/7462703537919675654?is_from_webapp=1&sender_device=pc&web_id=7628201488740812304" target="_blank">🎵 TikTok</a>
-
-</div>
+        <h4>Contact Us</h4>
+        <a href="tel:085163007071">📞 Telepon: 0851-6300-7071</a><br>
+        <a href="https://wa.me/6285163007071" target="_blank">📱 WhatsApp: 0851-6300-7071</a><br>
+        <a href="https://www.instagram.com/eskakity?igsh=MXZuYjR2Mjc2Nms4" target="_blank">📸 Instagram</a><br>
+        <a href="https://www.tiktok.com/@estehjumbokakty/video/7462703537919675654?is_from_webapp=1&sender_device=pc&web_id=7628201488740812304" target="_blank">🎵 TikTok</a>
+      </div>
       
       <div class="col-md-3">
         <h4>Address</h4>
         <p>📍 Jl. Kuala Madu<br>Depan Pondok Pesantren<br>Muhammadiyah</p>
-         <a href="https://maps.app.goo.gl/UXwX31VPiWoHEswo9" target="_blank">Lihat Maps</a>
+        <a href="https://maps.app.goo.gl/UXwX31VPiWoHEswo9" target="_blank">Lihat Maps</a>
       </div>
       
       <div class="col-md-3">
@@ -400,7 +390,7 @@ body{
     </div>
   </div>
   
-  <div class="footer-bottom">
+  <div class="copy-bawah">
     Dibuat dengan cinta ❤️ | Es teh paling seger.
   </div>
 </footer>

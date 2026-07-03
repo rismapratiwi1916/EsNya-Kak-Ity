@@ -6,15 +6,19 @@
 <title>EsNya Kak Ity - Es Teh Seger 4 Ribuan</title>
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
 body{
-  padding-top: 112px; /* 70 navbar + 42 announce */
+  padding-top: 112px; 
   background: #FAFCFA;
   color: #3A6B2F;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* === NAVBAR BS3 FIX TANPA !IMPORTANT === */
-.navbar-inverse{
+.nav-my{
   background: #fff;
   border: 0;
   border-bottom: 2px solid #C5E1A5;
@@ -25,7 +29,7 @@ body{
   top: 0; left: 0; right: 0;
   z-index: 1030;
 }
-.navbar-inverse .navbar-brand{
+.nav-my .navbar-brand{
   color: #3A6B2F;
   font-size: 22px;
   font-weight: 800;
@@ -33,7 +37,7 @@ body{
   line-height: 40px;
   padding: 15px;
 }
-.navbar-inverse .navbar-nav > li > a{
+.nav-my .navbar-nav > li > a{
   color: #3A6B2F;
   font-weight: 500;
   font-size: 15px;
@@ -41,32 +45,27 @@ body{
   line-height: 40px;
   padding: 15px 20px;
 }
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > li > a:hover,
-.navbar-inverse .navbar-nav > li > a:focus{
-  color: #2D5016;
-  background: #F3F8F3;
-}
-.navbar-inverse .navbar-toggle{
+
+.nav-my .navbar-toggle{
   border-color: #C5E1A5;
   margin-top: 18px;
   margin-right: 15px;
 }
-.navbar-inverse .navbar-toggle:hover,
-.navbar-inverse .navbar-toggle:focus{
-  background: #F3F8F3;
-}
-.navbar-inverse .navbar-toggle .icon-bar{
+
+.nav-my .navbar-toggle .icon-bar{
   background: #3A6B2F;
 }
-.navbar-inverse .navbar-collapse{
-  border-top: 0;
-  box-shadow: none;
+
+.nav-my .navbar-nav > li.active > a,
+.nav-my .navbar-nav > li > a:hover,
+.nav-my .navbar-nav > li > a:focus {
+  background-color: transparent;
+  color: #2D5016;
+  font-weight: 700;
+  border-bottom: 3px solid #3A6B2F;
 }
 
-
-/* ANNOUNCE BAR */
-.announce-bar{
+.bar-info{
   background: linear-gradient(135deg, #E8F5E9 0%, #D4EBD6 100%);
   color: #2D5016;
   padding: 12px 0;
@@ -112,28 +111,28 @@ body{
 .hero img {
   max-width: 300px;
 }
-.our-story {
+.cerita-kita {
   padding: 70px 0;
   background: white;
 }
-.our-story h2 {
+.cerita-kita h2 {
   font-size: 40px;
   font-weight: 800;
   color: #3A6B2F;
   margin: 0 0 40px;
   text-align: center;
 }
-.our-story p {
+.cerita-kita p {
   font-size: 16px;
   color: #4B5563;
   line-height: 1.8;
 }
-.our-story .kecil {
+.cerita-kita .kecil {
   font-size: 14px;
   font-style: italic;
   color: #648534;
 }
-.sedekah-box-home {
+.kotak-sedekah {
   background: linear-gradient(135deg, #E8F5E9 0%, #D4EBD6 100%);
   color: #2D5016;
   padding: 28px 25px;
@@ -142,7 +141,7 @@ body{
   margin: 30px 0;
   border: 1.5px solid #C5E1A5;
 }
-.sedekah-box-home span {
+.kotak-sedekah span {
   font-size: 22px;
   font-weight: 800;
   display: block;
@@ -165,22 +164,22 @@ body{
   max-width: 380px;
   border-radius: 20px;
 }
-.promo {
+.promo-minggu {
   padding: 80px 0;
   background: linear-gradient(135deg, #FAFCFA 0%, #F3F8F3 100%);
 }
-.promo h2 {
+.promo-minggu h2 {
   font-size: 38px;
   font-weight: 800;
   color: #2D5016;
   margin: 0 0 50px;
   text-align: center;
 }
-.promo-grid {
+.grid-promo {
   display: flex;
   gap: 25px;
 }
-.promo-card {
+.kartu-promo {
   background: white;
   border-radius: 18px;
   padding: 32px;
@@ -189,7 +188,7 @@ body{
   display: flex;
   flex-direction: column;
 }
-.promo-day {
+.hari-promo {
   background: #E8F5E9;
   color: #3A6B2F;
   font-size: 11px;
@@ -199,18 +198,18 @@ body{
   display: inline-block;
   margin-bottom: 20px;
 }
-.promo-day.jumat {
+.hari-promo.jumat {
   background: linear-gradient(135deg, #FFF3CD 0%, #FFE69C 100%);
   color: #8B5A00;
 }
-.promo-content {
+.isi-promo {
   display: flex;
   align-items: center;
   gap: 20px;
   margin-top: auto;
 }
-.promo-text {flex: 1}
-.promo-text h3 {
+.teks-promo {flex: 1}
+.teks-promo h3 {
   font-size: 22px;
   font-weight: 700;
   color: #2D5016;
@@ -228,39 +227,39 @@ body{
   margin: 14px 0;
   letter-spacing: 0.5px;
 }
-.promo-img img {
+.gambar-promo img {
   width: 90px;
   height: 100px;
   object-fit: contain;
 }
-.promo-img-jumat img {
+.gambar-promo.jumat img {
   width: 60px;
   height: 80px;
   object-fit: contain;
 }
-.testimoni {
+.kata-pelanggan {
   padding: 70px 0;
   background: white;
 }
-.testimoni h2 {
+.kata-pelanggan h2 {
   font-size: 40px;
   font-weight: 800;
   color: #3A6B2F;
   margin: 0 0 40px;
   text-align: center;
 }
-.testi-ss {
+.ss-pelanggan {
   border-radius: 16px;
   padding: 6px;
   margin-bottom: 15px;
   text-align: center;
 }
-.testi-ss img {
+.ss-pelanggan img {
   width: 80%;
   border-radius: 12px;
   display: inline-block;
 }
-.footer-kity{
+.bawah-footer{
   background: linear-gradient(135deg, #FAFCFA 0%, #F3F8F3 100%);
   color: #4B5563;
   padding: 45px 20px 20px;
@@ -269,22 +268,22 @@ body{
   width: 100%;
   text-align: center;
 }
-.footer-logo{
+.logo-bawah{
   font-size: 24px;
   font-weight: 800;
   margin-bottom: 14px;
   color: #3A6B2F;
 }
-.footer-bottom{
+.copy-bawah{
   border-top: 1px solid #E8F0E8;
   padding-top: 18px;
   text-align: center;
   font-size: 13px;
   color: #656667;
 }
-/* RESPONSIVE HP */
+
 @media (max-width: 767px){
-  body{padding-top: 102px} /* 60 + 42 */
+  body{padding-top: 102px} 
   
   .navbar.navbar-inverse{min-height: 60px}
   .navbar.navbar-inverse .navbar-brand{height: 60px; line-height: 30px; font-size: 20px}
@@ -292,7 +291,7 @@ body{
   .navbar.navbar-inverse .navbar-nav{float: none; margin: 0}
   .navbar.navbar-inverse .navbar-nav > li{float: none}
   
-  .announce-bar{top: 60px; font-size: 12px; padding: 10px 0}
+  .bar-info{top: 70px; font-size: 12px; padding: 10px 0}
   .hero{
     min-height: auto;
     padding: 30px 18px 70px;
@@ -302,34 +301,34 @@ body{
   .hero p{font-size: 15px; margin-bottom: 32px;}
   .hero img{max-width: 200px; margin: 0 auto 20px; display: block;}
   
-  .our-story{padding: 50px 18px}
-  .our-story h2{font-size: 28px; margin-bottom: 30px}
+  .cerita-kita{padding: 50px 18px}
+  .cerita-kita h2{font-size: 28px; margin-bottom: 30px}
   .story-img{margin-bottom: 25px}
   .story-img img{max-width: 100%}
-  .sedekah-box-home span{font-size: 18px}
-  .sedekah-box-home p{font-size: 13px}
+  .kotak-sedekah span{font-size: 18px}
+  .kotak-sedekah p{font-size: 13px}
   
-  .promo{padding: 50px 18px}
-  .promo h2{font-size: 26px; margin-bottom: 30px}
-  .promo-grid{display: block}
-  .promo-card{margin-bottom: 20px; padding: 24px}
-  .promo-content{flex-direction: column; text-align: center}
-  .promo-img, .promo-img-jumat{margin-top: 15px}
-  .promo-img img{width: 80px; height: 90px}
-  .promo-img-jumat img{width: 55px; height: 75px}
+  .promo-minggu{padding: 50px 18px}
+  .promo-minggu h2{font-size: 26px; margin-bottom: 30px}
+  .grid-promo{display: block}
+  .kartu-promo{margin-bottom: 20px; padding: 24px}
+  .isi-promo{flex-direction: column; text-align: center}
+  .gambar-promo, .gambar-promo.jumat{margin-top: 15px}
+  .gambar-promo img{width: 80px; height: 90px}
+  .gambar-promo.jumat img{width: 55px; height: 75px}
   .buy2get1-box{font-size: 18px}
   .buy2get1-box span{font-size: 22px}
   
-  .testimoni{padding: 50px 18px}
-  .testimoni h2{font-size: 28px; margin-bottom: 30px}
+  .kata-pelanggan{padding: 50px 18px}
+  .kata-pelanggan h2{font-size: 28px; margin-bottom: 30px}
   
-  .footer-kity{padding: 35px 18px 18px; margin-top: 30px}
+  .bawah-footer{padding: 35px 18px 18px; margin-top: 30px}
   .col-md-3, .col-md-5, .col-md-6, .col-md-7{margin-bottom: 25px}}
 </style>
 </head>
 <body>
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar nav-my">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -352,7 +351,7 @@ body{
   </div>
 </nav>	
 
-<div class="announce-bar">
+<div class="bar-info">
     Only the best for you bestie. Gula asli 100%🔥
 </div>
 
@@ -371,7 +370,7 @@ body{
   </div>
 </section>
 
-<section class="our-story">
+<section class="cerita-kita">
   <div class="container">
     <h2>Our Story</h2>
     <div class="row">
@@ -383,7 +382,7 @@ body{
       <div class="col-md-7">
          <p>EsNya Kak Ity berdiri sejak 2023 dari 1 gerobak. Alhamdulillah, sekarang sudah 5 outlet dan tetap konsisten pakai 100% gula asli, tanpa pengawet. Kami juga rutin sedekah ke masjid tiap Jum'at, sekaligus ada promo Buy 2 Get 1 Free setiap Jumat.</p>
         
-        <div class="sedekah-box-home">
+        <div class="kotak-sedekah">
           <span>🍃 BERDAGANG SAMBIL BERSEDEKAH</span>
           <p>Setiap cup kamu ada sedekah didalamnya</p>
         </div>
@@ -396,19 +395,19 @@ body{
   </div>
 </section>
 
-<section class="promo">
+<section class="promo-minggu">
   <div class="container">
     <h2>Promo Mingguan Spesial</h2>
-    <div class="row promo-grid">
+    <div class="row grid-promo">
       <div class="col-md-6">
-        <div class="promo-card">
-          <span class="promo-day">SENIN</span>
-          <div class="promo-content">
-            <div class="promo-text">
+        <div class="kartu-promo">
+          <span class="hari-promo">SENIN</span>
+          <div class="isi-promo">
+            <div class="teks-promo">
               <h3>Monday QRIS</h3>
               <p>Bayar pake QRIS <b>GRATIS BETTER</b><br>Upgrade ke cup better tanpa biaya tambahan</p>
             </div>
-            <div class="promo-img">
+            <div class="gambar-promo">
               <img src="better-removebg-preview.png" alt="Better">
             </div>
           </div>
@@ -416,10 +415,10 @@ body{
       </div>
       
       <div class="col-md-6">
-        <div class="promo-card">
-          <span class="promo-day jumat">JUMAT BERKAH 🕌</span>
-          <div class="promo-content">
-            <div class="promo-text">
+        <div class="kartu-promo">
+          <span class="hari-promo jumat">JUMAT BERKAH 🕌</span>
+          <div class="isi-promo">
+            <div class="teks-promo">
               <h3>Jumat Berkah</h3>
               <div class="buy2get1-box">
                 BUY 2 <span>GET 1 FREE</span>
@@ -427,7 +426,7 @@ body{
               <p>Beli 2 Es Teh Original GRATIS 1<br>Beli 2 Greentea GRATIS 1 Es Teh Original</p>
               <p><small>*Berlaku kelipatan, setiap Jumat aja ya bestie</small></p>
             </div>
-            <div class="promo-img-jumat">
+            <div class="gambar-promo jumat">
               <img src="teh-ori-removebg-preview.png" alt="Es Teh Original">
               <img src="grentea-removebg-preview.png" alt="Greentea">
             </div>
@@ -438,27 +437,27 @@ body{
   </div>
 </section>
 
-<section class="testimoni">
+<section class="kata-pelanggan">
   <div class="container">
     <h2>Testimoni</h2>
     <div class="row">
       <div class="col-md-3 col-xs-6">
-        <div class="testi-ss">
+        <div class="ss-pelanggan">
           <img src="tes1.jpeg" alt="Testimoni 1" class="img-responsive">
         </div>
       </div>
       <div class="col-md-3 col-xs-6">
-        <div class="testi-ss">
+        <div class="ss-pelanggan">
           <img src="test2.jpeg" alt="Testimoni 2" class="img-responsive">
         </div>
       </div>
       <div class="col-md-3 col-xs-6">
-        <div class="testi-ss">
+        <div class="ss-pelanggan">
           <img src="testi3.jpeg" alt="Testimoni 3" class="img-responsive">
         </div>
       </div>
       <div class="col-md-3 col-xs-6">
-        <div class="testi-ss">
+        <div class="ss-pelanggan">
           <img src="testii4.jpeg" alt="Testimoni 4" class="img-responsive">
         </div>
       </div>
@@ -466,11 +465,11 @@ body{
   </div>
 </section>
 
-<footer class="footer-kity">
+<footer class="bawah-footer">
   <div class="container footer-grid">
     <div class="row">
       <div class="col-md-3">
-        <div class="footer-logo">EsNya Kak Ity</div>
+        <div class="logo-bawah">EsNya Kak Ity</div>
         <p>Es teh seger 4 ribuan. 100% gula asli, tanpa pengawet, dibuat fresh setiap hari. Dompet aman tenggorokan adem!</p>
       </div>
       <div class="col-md-3">
@@ -491,7 +490,7 @@ body{
       </div>
     </div>
   </div>
-  <div class="footer-bottom">
+  <div class="copy-bawah">
     Dibuat dengan cinta ❤️ | Es teh paling seger.
   </div>
 </footer>

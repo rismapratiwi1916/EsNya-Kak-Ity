@@ -6,15 +6,19 @@
 <title>Menu - EsNya Kak Ity</title>
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
 body{
-  padding-top: 70px; /* 70 navbar doang, ga ada announce */
+  padding-top: 112px; 
   background: #FAFCFA;
   color: #3A6B2F;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* === NAVBAR BS3 FIX === */
-.navbar-inverse{
+.nav-my{
   background: #fff;
   border: 0;
   border-bottom: 2px solid #C5E1A5;
@@ -25,7 +29,7 @@ body{
   top: 0; left: 0; right: 0;
   z-index: 1030;
 }
-.navbar-inverse .navbar-brand{
+.nav-my .navbar-brand{
   color: #3A6B2F;
   font-size: 22px;
   font-weight: 800;
@@ -33,7 +37,7 @@ body{
   line-height: 40px;
   padding: 15px;
 }
-.navbar-inverse .navbar-nav > li > a{
+.nav-my .navbar-nav > li > a{
   color: #3A6B2F;
   font-weight: 500;
   font-size: 15px;
@@ -41,23 +45,27 @@ body{
   line-height: 40px;
   padding: 15px 20px;
 }
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > li > a:hover,
-.navbar-inverse .navbar-nav > li > a:focus{
-  color: #2D5016;
-  background: #F3F8F3;
-}
-.navbar-inverse .navbar-toggle{
+
+.nav-my .navbar-toggle{
   border-color: #C5E1A5;
   margin-top: 18px;
   margin-right: 15px;
 }
-.navbar-inverse .navbar-toggle .icon-bar{
+
+.nav-my .navbar-toggle .icon-bar{
   background: #3A6B2F;
 }
 
+.nav-my .navbar-nav > li.active > a,
+.nav-my .navbar-nav > li > a:hover,
+.nav-my .navbar-nav > li > a:focus {
+  background-color: transparent;
+  color: #2D5016;
+  font-weight: 700;
+  border-bottom: 3px solid #3A6B2F;
+}
 
-.menu-banner{
+.banner-menu{
   position: relative;
   height: 200px;
   display: flex;
@@ -66,26 +74,27 @@ body{
   margin-bottom: 25px;
   border-radius: 18px;
   overflow: hidden;
+  margin-top: -40px;
 }
-.menu-banner-bg{
+.bg-banner{
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
   opacity: 0.30;
 }
-.menu-banner-bg img{
+.bg-banner img{
   width: 100%; height: 100%;
   object-fit: cover;
   object-position: center 35%;
 }
-.menu-title{
+.judul-menu{
   font-size: 52px;
   font-weight: 800;
   color: #3A6B2F;
   letter-spacing: 5px;
   text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff;
 }
-.service-badge{
+.layanan-badge{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,13 +108,13 @@ body{
   background: white;
   flex-wrap: wrap;
 }
-.service-label{
+.label-layanan{
   color: #4B5563;
   font-weight: 500;
   letter-spacing: 1px;
 }
 
-.menu-categories li a{
+.list-kategori li a{
   display: block;
   padding: 10px 0 10px 15px;
   color: #2e8c57;
@@ -114,14 +123,14 @@ body{
   font-weight: 500;
   border-left: 3px solid transparent;
 }
-.menu-categories li.active a,
-.menu-categories li a:hover{
+.list-kategori li.active a,
+.list-kategori li a:hover{
   border-left-color: #C5E1A5;
   color: #3A6B2F;
   background: #F3F8F3;
 }
-.menu-category{margin-bottom: 50px}
-.menu-category h2{
+.kategori-menu{margin-bottom: 50px}
+.kategori-menu h2{
   font-size: 26px;
   font-weight: 700;
   color: #3A6B2F;
@@ -129,12 +138,12 @@ body{
   padding-bottom: 10px;
   border-bottom: 3px solid #C5E1A5;
 }
-.menu-item{
+.item-menu{
   padding: 22px 0;
   border-bottom: 1px solid #e8e8e8;
 }
-.menu-item:last-child{border-bottom: none}
-.menu-img{
+.item-menu:last-child{border-bottom: none}
+.gambar-menu{
   width: 120px; 
   height: 160px; 
   background: white;
@@ -147,32 +156,32 @@ body{
   box-shadow: 0 4px 12px rgba(58,107,47,0.08);
   margin: 0 auto 15px;
 }
-.menu-img img{
+.gambar-menu img{
   width: 100%;
   height: 100%;
   max-width: 100%;
   object-fit: contain;
 }
-.menu-info h3{
+.info-menu h3{
   font-size: 19px;
   font-weight: 700;
   color: #3A6B2F;
   margin: 0 0 8px 0;
 }
-.menu-desc{
+.deskripsi-menu{
   font-size: 14px;
   color: #232b35;
   line-height: 1.7;
   margin: 0 0 6px 0;
 }
-.menu-komposisi{
+.komposisi-menu{
   font-size: 12px;
   color: #648534;
   font-weight: 500;
   margin: 0 0 8px 0;
 }
-.menu-varian{display: flex; gap: 8px; flex-wrap: wrap}
-.varian{
+.varian-menu{display: flex; gap: 8px; flex-wrap: wrap}
+.ukuran{
   padding: 5px 12px;
   border-radius: 18px;
   font-size: 12px;
@@ -181,10 +190,10 @@ body{
   color: #3A6B2F;
   background: white;
 }
-.varian.mini{background: #4d5e39; color: white}
-.varian.jumbo{background: #FF6B35; border-color: #FF6B35; color: white}
+.ukuran.mini{background: #4d5e39; color: white}
+.ukuran.jumbo{background: #FF6B35; border-color: #FF6B35; color: white}
 
-.footer-kity{
+.bawah-footer{
   background: linear-gradient(135deg, #FAFCFA 0%, #F3F8F3 100%);
   color: #4B5563;
   padding: 45px 20px 20px;
@@ -193,13 +202,13 @@ body{
   width: 100%;
   text-align: center;
 }
-.footer-logo{
+.logo-bawah{
   font-size: 24px;
   font-weight: 800;
   margin-bottom: 14px;
   color: #3A6B2F;
 }
-.footer-bottom{
+.copy-bawah{
   border-top: 1px solid #E8F0E8;
   padding-top: 18px;
   text-align: center;
@@ -214,41 +223,41 @@ body{
   .navbar.navbar-inverse .navbar-nav{float: none; margin: 0}
   .navbar.navbar-inverse .navbar-nav > li{float: none}
   
-  .menu-banner{height: 140px; margin-bottom: 20px}
-  .menu-title{font-size: 36px; letter-spacing: 3px}
-  .service-badge{font-size: 11px; padding: 10px 18px; gap: 6px; margin-bottom: 28px}
+  .banner-menu{height: 160px; margin-top: -10px}
+  .judul-menu{font-size: 36px; letter-spacing: 3px}
+  .layanan-badge{font-size: 11px; padding: 10px 18px; gap: 6px; margin-bottom: 28px}
   
-  .menu-sidebar{position: static; margin-bottom: 25px}
-  .menu-categories{
+  .sidebar-menu{position: static; margin-bottom: 25px}
+  .list-kategori{
     display: flex;
     gap: 15px;
     overflow-x: auto;
     padding-bottom: 8px;
   }
-  .menu-categories li{flex-shrink: 0}
-  .menu-categories li a{
+  .list-kategori li{flex-shrink: 0}
+  .list-kategori li a{
     white-space: nowrap;
     border-left: none;
     border-bottom: 2px solid transparent;
     padding: 8px 5px;
     font-size: 14px;
   }
-  .menu-categories li.active a{border-bottom-color: #C5E1A5; border-left: none; background: transparent}
+  .list-kategori li.active a{border-bottom-color: #C5E1A5; border-left: none; background: transparent}
   
-  .menu-category{margin-bottom: 35px}
-  .menu-category h2{font-size: 22px; margin-bottom: 20px}
-  .menu-item{padding: 18px 0}
-  .menu-img{width: 90px; height: 120px; margin-bottom: 12px}
-  .menu-info h3{font-size: 17px}
-  .menu-desc{font-size: 13px}
+  .kategori-menu{margin-bottom: 35px}
+  .kategori-menu h2{font-size: 22px; margin-bottom: 20px}
+  .item-menu{padding: 18px 0}
+  .gambar-menu{width: 90px; height: 120px; margin-bottom: 12px}
+  .info-menu h3{font-size: 17px}
+  .deskripsi-menu{font-size: 13px}
   
-  .footer-kity{padding: 35px 18px 18px; margin-top: 30px}
+  .bawah-footer{padding: 35px 18px 18px; margin-top: 30px}
   .col-md-3, .col-md-9{margin-bottom: 20px}}
 </style>
 </head>
 <body>
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar nav-my">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-menu">
@@ -273,15 +282,15 @@ body{
 
 <div class="container">
   
-  <div class="menu-banner">
-    <div class="menu-banner-bg">
+  <div class="banner-menu">
+    <div class="bg-banner">
       <img src="owner.jpeg" alt="Menu Banner">
     </div>
-    <h1 class="menu-title">MENU</h1>
+    <h1 class="judul-menu">MENU</h1>
   </div>
 
-  <div class="service-badge">
-    <span class="service-label">TYPE OF SERVICES AVAILABLE</span>
+  <div class="layanan-badge">
+    <span class="label-layanan">TYPE OF SERVICES AVAILABLE</span>
     <span class="dot">•</span>
     <span>Pick-up</span>
     <span class="dot">•</span>
@@ -293,8 +302,8 @@ body{
   <div class="row menu-wrapper">
     <!-- SIDEBAR KIRI BS3 -->
     <div class="col-md-3">
-      <aside class="menu-sidebar">
-        <ul class="nav menu-categories">
+      <aside class="sidebar-menu">
+        <ul class="nav list-kategori">
           <li><a href="#teh">Es Teh Series</a></li>
           <li><a href="#greentea">Kasturi Series</a></li>
           <li><a href="#susu">Leci Series</a></li>
@@ -303,46 +312,45 @@ body{
       </aside>
     </div>
 
-    <!-- KONTEN KAN BS3 -->
     <div class="col-md-9">
       
-      <div id="teh" class="menu-category">
+      <div id="teh" class="kategori-menu">
         <h2>ES TEH SERIES</h2>
         
-        <div class="menu-item">
+        <div class="item-menu">
           <div class="row">
             <div class="col-md-3 col-xs-4">
-              <div class="menu-img">
+              <div class="gambar-menu">
                 <img src="teh-ori-removebg-preview.png" alt="Es Teh Jumbo Original" class="img-responsive">
               </div>
             </div>
             <div class="col-md-9 col-xs-8">
-              <div class="menu-info">
+              <div class="info-menu">
                 <h3>Teh Jumbo Original</h3>
-                <p class="menu-desc">Terbuat dari daun teh kering murni yang dimasak selama 1 jam dan diendapkan selama 1 jam.</p>
-                <p class="menu-komposisi">Komposisi: Air gula murni, air teh yang sudah dimasak dan diendapkan, es batu.<br>(air gula dan air teh dimasak secara terpisah)</p>
-                <div class="menu-varian">
-                  <span class="varian jumbo">Jumbo 4rb</span>
+                <p class="deskripsi-menu">Terbuat dari daun teh kering murni yang dimasak selama 1 jam dan diendapkan selama 1 jam.</p>
+                <p class="komposisi-menu">Komposisi: Air gula murni, air teh yang sudah dimasak dan diendapkan, es batu.<br>(air gula dan air teh dimasak secara terpisah)</p>
+                <div class="varian-menu">
+                  <span class="ukuran jumbo">Jumbo 4rb</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="menu-item">
+        <div class="item-menu">
           <div class="row">
             <div class="col-md-3 col-xs-4">
-              <div class="menu-img">
+              <div class="gambar-menu">
                 <img src="grentea-removebg-preview.png" alt="Greentea" class="img-responsive">
               </div>
             </div>
             <div class="col-md-9 col-xs-8">
-              <div class="menu-info">
+              <div class="info-menu">
                 <h3>Teh Green Tea</h3>
-                <p class="menu-desc">Rebusan daun teh hijau yang dimasak selama 15 menit dan diendapkan selama 10 menit.</p>
-                <p class="menu-komposisi">Komposisi: Air gula murni, air teh hijau yang sudah dimasak dan diendapkan, es batu.</p>
-                <div class="menu-varian">
-                  <span class="varian jumbo">Jumbo 4rb</span>
+                <p class="deskripsi-menu">Rebusan daun teh hijau yang dimasak selama 15 menit dan diendapkan selama 10 menit.</p>
+                <p class="komposisi-menu">Komposisi: Air gula murni, air teh hijau yang sudah dimasak dan diendapkan, es batu.</p>
+                <div class="varian-menu">
+                  <span class="ukuran jumbo">Jumbo 4rb</span>
                 </div>
               </div>
             </div>
@@ -350,45 +358,45 @@ body{
         </div>
       </div>
 
-      <div id="greentea" class="menu-category">
+      <div id="greentea" class="kategori-menu">
         <h2>KASTURI SERIES</h2>
         
-        <div class="menu-item">
+        <div class="item-menu">
           <div class="row">
             <div class="col-md-3 col-xs-4">
-              <div class="menu-img">
+              <div class="gambar-menu">
                 <img src="kasturi-greantea-removebg-preview.png" alt="Kasturi Green Tea" class="img-responsive">
               </div>
             </div>
             <div class="col-md-9 col-xs-8">
-              <div class="menu-info">
+              <div class="info-menu">
                 <h3>Kasturi Green Tea</h3>
-                <p class="menu-desc">Kesatuan dari perasan kasturi dengan teh green tea.</p>
-                <p class="menu-komposisi">Komposisi: Air gula murni, air perasan jeruk kasturi, air teh hijau, biji selasi, es batu.</p>
-                <div class="menu-varian">
-                  <span class="varian mini">Mini 5rb</span>
-                  <span class="varian jumbo">Jumbo 7rb</span>
+                <p class="deskripsi-menu">Kesatuan dari perasan kasturi dengan teh green tea.</p>
+                <p class="komposisi-menu">Komposisi: Air gula murni, air perasan jeruk kasturi, air teh hijau, biji selasi, es batu.</p>
+                <div class="varian-menu">
+                  <span class="ukuran mini">Mini 5rb</span>
+                  <span class="ukuran jumbo">Jumbo 7rb</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="menu-item">
+        <div class="item-menu">
           <div class="row">
             <div class="col-md-3 col-xs-4">
-              <div class="menu-img">
+              <div class="gambar-menu">
                 <img src="kasturi-fresh-removebg-preview.png" alt="Kasturi Fresh" class="img-responsive">
               </div>
             </div>
             <div class="col-md-9 col-xs-8">
-              <div class="menu-info">
+              <div class="info-menu">
                 <h3>Kasturi Fresh</h3>
-                <p class="menu-desc">Perasan air kasturi segar yang dicampur dengan air gula asli.</p>
-                <p class="menu-komposisi">Komposisi: Perasan air jeruk kasturi, air gula murni, air putih, biji selasi, es batu.</p>
-                <div class="menu-varian">
-                  <span class="varian mini">Mini 5rb</span>
-                  <span class="varian jumbo">Jumbo 7rb</span>
+                <p class="deskripsi-menu">Perasan air kasturi segar yang dicampur dengan air gula asli.</p>
+                <p class="komposisi-menu">Komposisi: Perasan air jeruk kasturi, air gula murni, air putih, biji selasi, es batu.</p>
+                <div class="varian-menu">
+                  <span class="ukuran mini">Mini 5rb</span>
+                  <span class="ukuran jumbo">Jumbo 7rb</span>
                 </div>
               </div>
             </div>
@@ -396,45 +404,45 @@ body{
         </div>
       </div>
 
-      <div id="susu" class="menu-category">
+      <div id="susu" class="kategori-menu">
         <h2>LECI SERIES</h2>
         
-        <div class="menu-item">
+        <div class="item-menu">
           <div class="row">
             <div class="col-md-3 col-xs-4">
-              <div class="menu-img">
+              <div class="gambar-menu">
                 <img src="leci-greantea-removebg-preview.png" alt="Leci Green Tea" class="img-responsive">
               </div>
             </div>
             <div class="col-md-9 col-xs-8">
-              <div class="menu-info">
+              <div class="info-menu">
                 <h3>Leci Green Tea</h3>
-                <p class="menu-desc">Perpaduan dari rasa leci dengan teh hijau.</p>
-                <p class="menu-komposisi">Komposisi: Air gula murni, air teh hijau, sirup leci, natadecoco, es batu.</p>
-                <div class="menu-varian">
-                  <span class="varian mini">Mini 5rb</span>
-                  <span class="varian jumbo">Jumbo 7rb</span>
+                <p class="deskripsi-menu">Perpaduan dari rasa leci dengan teh hijau.</p>
+                <p class="komposisi-menu">Komposisi: Air gula murni, air teh hijau, sirup leci, natadecoco, es batu.</p>
+                <div class="varian-menu">
+                  <span class="ukuran mini">Mini 5rb</span>
+                  <span class="ukuran jumbo">Jumbo 7rb</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="menu-item">
+        <div class="item-menu">
           <div class="row">
             <div class="col-md-3 col-xs-4">
-              <div class="menu-img">
+              <div class="gambar-menu">
                 <img src="leci-tea-removebg-preview.png" alt="Leci Tea" class="img-responsive">
               </div>
             </div>
             <div class="col-md-9 col-xs-8">
-              <div class="menu-info">
+              <div class="info-menu">
                 <h3>Leci Tea</h3>
-                <p class="menu-desc">Perpaduan dari teh murni dengan leci.</p>
-                <p class="menu-komposisi">Komposisi: Air gula murni, air teh original, sirup leci, natadecoco, es batu.</p>
-                <div class="menu-varian">
-                  <span class="varian mini">Mini 6rb</span>
-                  <span class="varian jumbo">Jumbo 8rb</span>
+                <p class="deskripsi-menu">Perpaduan dari teh murni dengan leci.</p>
+                <p class="komposisi-menu">Komposisi: Air gula murni, air teh original, sirup leci, natadecoco, es batu.</p>
+                <div class="varian-menu">
+                  <span class="ukuran mini">Mini 6rb</span>
+                  <span class="ukuran jumbo">Jumbo 8rb</span>
                 </div>
               </div>
             </div>
@@ -442,23 +450,23 @@ body{
         </div>
       </div>
 
-      <div id="premium" class="menu-category">
+      <div id="premium" class="kategori-menu">
         <h2>CINCAU SERIES</h2>
         
-        <div class="menu-item">
+        <div class="item-menu">
           <div class="row">
             <div class="col-md-3 col-xs-4">
-              <div class="menu-img">
+              <div class="gambar-menu">
                 <img src="cincau-removebg-preview.png" alt="Cincau" class="img-responsive">
               </div>
             </div>
             <div class="col-md-9 col-xs-8">
-              <div class="menu-info">
+              <div class="info-menu">
                 <h3>Teh Cincau</h3>
-                <p class="menu-desc">Perpaduan dari air teh murni dengan cincau.</p>
-                <p class="menu-komposisi">Komposisi: Air gula murni, air teh original, cincau, es batu.</p>
-                <div class="menu-varian">
-                  <span class="varian jumbo">Jumbo 5rb</span>
+                <p class="deskripsi-menu">Perpaduan dari air teh murni dengan cincau.</p>
+                <p class="komposisi-menu">Komposisi: Air gula murni, air teh original, cincau, es batu.</p>
+                <div class="varian-menu">
+                  <span class="ukuran jumbo">Jumbo 5rb</span>
                 </div>
               </div>
             </div>
@@ -470,11 +478,11 @@ body{
   </div>
 </div>
 
-<footer class="footer-kity">
+<footer class="bawah-footer">
   <div class="container footer-grid">
     <div class="row">
       <div class="col-md-3">
-        <div class="footer-logo">EsNya Kak Ity</div>
+        <div class="logo-bawah">EsNya Kak Ity</div>
         <p>Es teh seger 4 ribuan. 100% gula asli, tanpa pengawet, dibuat fresh setiap hari. Dompet aman tenggorokan adem!</p>
       </div>
       <div class="col-md-3">
@@ -495,7 +503,7 @@ body{
       </div>
     </div>
   </div>
-  <div class="footer-bottom">
+  <div class="copy-bawah">
     Dibuat dengan cinta ❤️ | Es teh paling seger.
   </div>
 </footer>

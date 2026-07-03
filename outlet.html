@@ -6,15 +6,19 @@
 <title>Outlet - EsNya Kak Ity</title>
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
 body{
-  padding-top: 70px; /* 70 navbar doang, ga ada announce */
+  padding-top: 112px; 
   background: #FAFCFA;
   color: #3A6B2F;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* === NAVBAR BS3 FIX === */
-.navbar-inverse{
+.nav-my{
   background: #fff;
   border: 0;
   border-bottom: 2px solid #C5E1A5;
@@ -25,7 +29,7 @@ body{
   top: 0; left: 0; right: 0;
   z-index: 1030;
 }
-.navbar-inverse .navbar-brand{
+.nav-my .navbar-brand{
   color: #3A6B2F;
   font-size: 22px;
   font-weight: 800;
@@ -33,7 +37,7 @@ body{
   line-height: 40px;
   padding: 15px;
 }
-.navbar-inverse .navbar-nav > li > a{
+.nav-my .navbar-nav > li > a{
   color: #3A6B2F;
   font-weight: 500;
   font-size: 15px;
@@ -41,52 +45,50 @@ body{
   line-height: 40px;
   padding: 15px 20px;
 }
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > li > a:hover,
-.navbar-inverse .navbar-nav > li > a:focus{
-  color: #2D5016;
-  background: #F3F8F3;
-}
-.navbar-inverse .navbar-toggle{
+
+.nav-my .navbar-toggle{
   border-color: #C5E1A5;
   margin-top: 18px;
   margin-right: 15px;
 }
-.navbar-inverse .navbar-toggle:hover,
-.navbar-inverse .navbar-toggle:focus{
-  background: #F3F8F3;
-}
-.navbar-inverse .navbar-toggle .icon-bar{
+
+.nav-my .navbar-toggle .icon-bar{
   background: #3A6B2F;
 }
-.navbar-inverse .navbar-collapse{
-  border-top: 0;
-  box-shadow: none;
+
+.nav-my .navbar-nav > li.active > a,
+.nav-my .navbar-nav > li > a:hover,
+.nav-my .navbar-nav > li > a:focus {
+  background-color: transparent;
+  color: #2D5016;
+  font-weight: 700;
+  border-bottom: 3px solid #3A6B2F;
 }
 
-.outlet-banner{
+.banner-outlet{
   background: linear-gradient(135deg, #FAFCFA 0%, #F3F8F3 100%);
   padding: 45px 20px 30px; 
   text-align: center;
   width: 100%;
   border-bottom: 1px solid #F1F5F1;
+  margin-top: -42px; 
 }
-.outlet-banner h1{
+.banner-outlet h1{
   font-size: 42px; 
   font-weight: 800;
   color: #3A6B2F;
   margin-bottom: 10px; 
 }
-.outlet-banner p{
+.banner-outlet p{
   font-size: 16px;
   color: #4B5563;
 }
-.outlet-section{
+.daftar-outlet{
   padding: 45px 20px 70px;
   max-width: 1100px;
   margin: 0 auto;
 }
-.outlet-item{
+.kartu-outlet{
   background: white;
   border-radius: 18px; 
   padding: 30px; 
@@ -95,15 +97,15 @@ body{
   border: 1px solid #E5E7EB;
   transition: 0.3s;
 }
-.outlet-item:hover{
+.kartu-outlet:hover{
   transform: translateY(-4px);
   box-shadow: 0 12px 30px rgba(58,107,47,0.1);
   border-color: #C5E1A5;
 }
-.outlet-header{
+.kepala-outlet{
   margin-bottom: 22px;
 }
-.outlet-number{
+.nomor-outlet{
   background: #C5E1A5;
   color: white;
   width: 42px; 
@@ -116,7 +118,7 @@ body{
   font-size: 17px;
   margin-right: 12px;
 }
-.outlet-header h2{
+.kepala-outlet h2{
   font-size: 26px; 
   font-weight: 700;
   color: #3A6B2F;
@@ -124,7 +126,7 @@ body{
   margin: 0;
   vertical-align: middle;
 }
-.outlet-img img{
+.gambar-outlet img{
   width: 100%;
   height: 260px; 
   object-fit: cover;
@@ -132,10 +134,10 @@ body{
   box-shadow: 0 4px 12px rgba(0,0,0,0.06);
   margin-bottom: 18px; 
 }
-.info-item{
+.item-info{
   margin-bottom: 20px; 
 }
-.info-item h4{
+.item-info h4{
   font-size: 14px;
   font-weight: 700;
   color: #4f9400;
@@ -143,25 +145,25 @@ body{
   letter-spacing: 1px;
   margin-bottom: 6px;
 }
-.info-item p{
+.item-info p{
   font-size: 15px;
   color: #4B5563;
   line-height: 1.7; 
   margin: 0;
 }
-.maps-box{
+.kotak-maps{
   margin-top: 18px; 
   border-radius: 14px;
   overflow: hidden;
   border: 1px solid #E5E7EB;
 }
-.maps-box iframe{
+.kotak-maps iframe{
   width: 100%;
   height: 230px; 
   border: none;
   display: block;
 }
-.jam-badge{
+.badge-jam{
   display: inline-block;
   background: #3A6B2F;
   color: white;
@@ -172,7 +174,7 @@ body{
   margin-right: 6px;
   margin-top: 4px;
 }
-.footer-kity{
+.bawah-footer{
   background: linear-gradient(135deg, #FAFCFA 0%, #F3F8F3 100%);
   color: #4B5563;
   padding: 45px 20px 20px;
@@ -181,13 +183,13 @@ body{
   width: 100%;
   text-align: center;
 }
-.footer-logo{
+.logo-bawah{
   font-size: 24px;
   font-weight: 800;
   margin-bottom: 14px;
   color: #3A6B2F;
 }
-.footer-bottom{
+.copy-bawah{
   border-top: 1px solid #E8F0E8;
   padding-top: 18px;
   text-align: center;
@@ -195,33 +197,33 @@ body{
   color: #656667;
 }
 
-/* === MOBILE FIX BS3 === */
 @media (max-width: 767px){
   body{padding-top: 60px}
-  
   .navbar.navbar-inverse{min-height: 60px}
   .navbar.navbar-inverse .navbar-brand{height: 60px; line-height: 30px; font-size: 20px}
   .navbar.navbar-inverse .navbar-nav > li > a{height: auto; line-height: 20px; padding: 15px}
   .navbar.navbar-inverse .navbar-nav{float: none; margin: 0}
   .navbar.navbar-inverse .navbar-nav > li{float: none}
-  .navbar.navbar-inverse .navbar-toggle{margin-top: 13px}
   
-  .outlet-banner{padding: 30px 18px 20px} 
-  .outlet-banner h1{font-size: 26px}
-  .outlet-banner p{font-size: 15px}
+  .banner-outlet{
+    padding: 30px 18px 20px;
+    margin-top: -0px; 
+  } 
+  .banner-outlet h1{font-size: 26px}
+  .banner-outlet p{font-size: 15px}
   
-  .outlet-section{padding: 30px 18px 45px} 
-  .outlet-item{padding: 22px 18px; margin-bottom: 22px} 
-  .outlet-header h2{font-size: 20px}
-  .outlet-img img{height: 200px} 
-  .maps-box iframe{height: 180px} 
-  .info-item{margin-bottom: 16px}
+  .daftar-outlet{padding: 30px 18px 45px} 
+  .kartu-outlet{padding: 22px 18px; margin-bottom: 22px} 
+  .kepala-outlet h2{font-size: 20px}
+  .gambar-outlet img{height: 200px} 
+  .kotak-maps iframe{height: 180px} 
+  .item-info{margin-bottom: 16px}
   .col-md-5, .col-md-7{margin-bottom: 15px}}
 </style>
 </head>
 <body>
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar nav-my">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-menu">
@@ -244,37 +246,37 @@ body{
   </div>
 </nav>
 
-<div class="outlet-banner">
+<div class="banner-outlet">
   <h1>Outlet Kami</h1>
   <p>Mampir ke outlet terdekat ya bestie, segernya langsung diseduh! 😋</p>
 </div>
 
-<div class="outlet-section">
+<div class="daftar-outlet">
 
-  <div class="outlet-item">
-    <div class="outlet-header">
-      <div class="outlet-number">1</div>
+  <div class="kartu-outlet">
+    <div class="kepala-outlet">
+      <div class="nomor-outlet">1</div>
       <h2>Outlet Pertama</h2>
     </div>
     <div class="row">
       <div class="col-md-5">
-        <div class="outlet-img">
+        <div class="gambar-outlet">
           <img src="tanjungpura.jpg" alt="Outlet Tanjungpura" class="img-responsive">
         </div>
       </div>
       <div class="col-md-7">
-        <div class="info-item">
+        <div class="item-info">
           <h4>Alamat Lengkap</h4>
           <p>Jl. Kuala Madu<br>Depan Pondok Pesantren Muhammadiyah</p>
         </div>
-        <div class="info-item">
+        <div class="item-info">
           <h4>Jam Buka</h4>
-          <span class="jam-badge">Senin - Minggu</span>
-          <span class="jam-badge">09.00 - 21.00 WIB</span>
+          <span class="badge-jam">Senin - Minggu</span>
+          <span class="badge-jam">09.00 - 21.00 WIB</span>
         </div>
-        <div class="info-item">
+        <div class="item-info">
           <h4>Lihat di Maps</h4>
-          <div class="maps-box">
+          <div class="kotak-maps">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.512441066793!2d98.5017858735748!3d3.697679349538819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312b82242e0363%3A0xb9b21b1880bac4c0!2sTOKO%20KAK%20ITY!5e0!3m2!1sid!2sid!4v1782643922879!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
           </div>
         </div>
@@ -282,30 +284,30 @@ body{
     </div>
   </div>
 
-  <div class="outlet-item">
-    <div class="outlet-header">
-      <div class="outlet-number">2</div>
+  <div class="kartu-outlet">
+    <div class="kepala-outlet">
+      <div class="nomor-outlet">2</div>
       <h2>Outlet Kedua</h2>
     </div>
     <div class="row">
       <div class="col-md-5">
-        <div class="outlet-img">
+        <div class="gambar-outlet">
           <img src="setiabudi.jpg" alt="Outlet Setia Budi" class="img-responsive">
         </div>
       </div>
       <div class="col-md-7">
-        <div class="info-item">
+        <div class="item-info">
           <h4>Alamat Lengkap</h4>
           <p>Jl. Binjai-Stabat Depan Kampus ITBI<br>Tepatnya Di Depan Bidan Yusmiati/Samping Masjid Al-Ikhlas</p>
         </div>
-        <div class="info-item">
+        <div class="item-info">
           <h4>Jam Buka</h4>
-          <span class="jam-badge">Senin - Minggu</span>
-          <span class="jam-badge">09.00 - 21.00 WIB</span>
+          <span class="badge-jam">Senin - Minggu</span>
+          <span class="badge-jam">09.00 - 21.00 WIB</span>
         </div>
-        <div class="info-item">
+        <div class="item-info">
           <h4>Lihat di Maps</h4>
-          <div class="maps-box">
+          <div class="kotak-maps">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.5105791485375!2d98.5056928436889!3d3.6980939222491593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312aca13da600b%3A0x45088e3f7d5ad04b!2sMasjid%20Al-Ikhlas%20(Permai)!5e0!3m2!1sid!2sid!4v1782644698681!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
           </div>
         </div>
@@ -313,30 +315,30 @@ body{
     </div>
   </div>
 
-  <div class="outlet-item">
-    <div class="outlet-header">
-      <div class="outlet-number">3</div>
+  <div class="kartu-outlet">
+    <div class="kepala-outlet">
+      <div class="nomor-outlet">3</div>
       <h2>Outlet Ketiga</h2>
     </div>
     <div class="row">
       <div class="col-md-5">
-        <div class="outlet-img">
+        <div class="gambar-outlet">
           <img src="ringroad.jpg" alt="Outlet Ring Road" class="img-responsive">
         </div>
       </div>
       <div class="col-md-7">
-        <div class="info-item">
+        <div class="item-info">
           <h4>Alamat Lengkap</h4>
           <p>Jl. Karang Rejo<br>Depan Teras Alfamart</p>
         </div>
-        <div class="info-item">
+        <div class="item-info">
           <h4>Jam Buka</h4>
-          <span class="jam-badge">Senin - Minggu</span>
-          <span class="jam-badge">09.00 - 21.00 WIB</span>
+          <span class="badge-jam">Senin - Minggu</span>
+          <span class="badge-jam">09.00 - 21.00 WIB</span>
         </div>
-        <div class="info-item">
+        <div class="item-info">
           <h4>Lihat di Maps</h4>
-          <div class="maps-box">
+          <div class="kotak-maps">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.4222278833445!2d98.50080127357484!3d3.717713049397487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3036d57ce3e3ffa9%3A0x9006d5857857f662!2sAlfamart%20Karang%20Rejo!5e0!3m2!1sid!2sid!4v1782644893105!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
           </div>
         </div>
@@ -344,30 +346,30 @@ body{
     </div>
   </div>
 
-  <div class="outlet-item">
-    <div class="outlet-header">
-      <div class="outlet-number">4</div>
+  <div class="kartu-outlet">
+    <div class="kepala-outlet">
+      <div class="nomor-outlet">4</div>
       <h2>Outlet Keempat</h2>
     </div>
     <div class="row">
       <div class="col-md-5">
-        <div class="outlet-img">
+        <div class="gambar-outlet">
           <img src="cemara.jpg" alt="Outlet Cemara" class="img-responsive">
         </div>
       </div>
       <div class="col-md-7">
-        <div class="info-item">
+        <div class="item-info">
           <h4>Alamat Lengkap</h4>
           <p>Jl. Karang Rejo, Gg Cokro<br>Depan Rumah Belajar Fian (hidden gem)</p>
         </div>
-        <div class="info-item">
+        <div class="item-info">
           <h4>Jam Buka</h4>
-          <span class="jam-badge">Senin - Minggu</span>
-          <span class="jam-badge">09.00 - 21.00 WIB</span>
+          <span class="badge-jam">Senin - Minggu</span>
+          <span class="badge-jam">09.00 - 21.00 WIB</span>
         </div>
-        <div class="info-item">
+        <div class="item-info">
           <h4>Lihat di Maps</h4>
-          <div class="maps-box">
+          <div class="kotak-maps">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.4255706199024!2d98.49855807357487!3d3.7169726494027127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3036d5ba61b4fb2d%3A0x21da0c5f53f90b3e!2sRumah%20Belajar%20Fian!5e0!3m2!1sid!2sid!4v1782645033440!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
           </div>
         </div>
@@ -375,30 +377,30 @@ body{
     </div>
   </div>
 
-  <div class="outlet-item">
-    <div class="outlet-header">
-      <div class="outlet-number">5</div>
+  <div class="kartu-outlet">
+    <div class="kepala-outlet">
+      <div class="nomor-outlet">5</div>
       <h2>Outlet Kelima</h2>
     </div>
     <div class="row">
       <div class="col-md-5">
-        <div class="outlet-img">
+        <div class="gambar-outlet">
           <img src="aksara.jpg" alt="Outlet Aksara" class="img-responsive">
         </div>
       </div>
       <div class="col-md-7">
-        <div class="info-item">
+        <div class="item-info">
           <h4>Alamat Lengkap</h4>
           <p>Depan Klinik Asia Medika Tandem<br>Samping Rumah Makan Ambun Pagi</p>
         </div>
-        <div class="info-item">
+        <div class="item-info">
           <h4>Jam Buka</h4>
-          <span class="jam-badge">Senin - Minggu</span>
-          <span class="jam-badge">10.00 - 22.00 WIB</span>
+          <span class="badge-jam">Senin - Minggu</span>
+          <span class="badge-jam">10.00 - 22.00 WIB</span>
         </div>
-        <div class="info-item">
+        <div class="item-info">
           <h4>Lihat di Maps</h4>
-          <div class="maps-box">
+          <div class="kotak-maps">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d995.3813032564201!2d98.50729880483587!3d3.694834306778246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312ac8349fdfe1%3A0x1053609493e6510!2sRm%20Ammbun%20Pagi!5e0!3m2!1sid!2sid!4v1782645269003!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
           </div>
         </div>
@@ -408,11 +410,11 @@ body{
 
 </div>
 
-<footer class="footer-kity">
+<footer class="bawah-footer">
   <div class="container footer-grid">
     <div class="row">
       <div class="col-md-3">
-        <div class="footer-logo">EsNya Kak Ity</div>
+        <div class="logo-bawah">EsNya Kak Ity</div>
         <p>Es teh seger 4 ribuan. 100% gula asli, tanpa pengawet, dibuat fresh setiap hari. Dompet aman tenggorokan adem!</p>
       </div>
       <div class="col-md-3">
@@ -433,7 +435,7 @@ body{
       </div>
     </div>
   </div>
-  <div class="footer-bottom">
+  <div class="copy-bawah">
     Dibuat dengan cinta ❤️ | Es teh paling seger.
   </div>
 </footer>
