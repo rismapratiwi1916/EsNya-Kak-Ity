@@ -6,25 +6,18 @@
 <title>EsNya Kak Ity - Es Teh Seger 4 Ribuan</title>
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 
 <style>
 body{
   padding-top: 112px; 
   background: #FAFCFA;
-  color: #3A6B2F;
   font-family: 'Poppins', sans-serif;
 }
-
 .nav-my{
   background: #fff;
-  border: 0;
-  border-bottom: 2px solid #C5E1A5;
-  border-radius: 0;
-  margin-bottom: 0;
-  min-height: 70px;
+  border-bottom: 2px solid #C5E1A5; 
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1030;
@@ -33,23 +26,18 @@ body{
   color: #3A6B2F;
   font-size: 22px;
   font-weight: 800;
-  height: 70px;
-  line-height: 40px;
-  padding: 15px;
+  padding: 20px 15px; 
 }
 .nav-my .navbar-nav > li > a{
   color: #3A6B2F;
   font-weight: 500;
   font-size: 15px;
-  height: 70px;
-  line-height: 40px;
-  padding: 15px 20px;
+  padding: 20px 20px; 
 }
 
 .nav-my .navbar-toggle{
   border-color: #C5E1A5;
   margin-top: 18px;
-  margin-right: 15px;
 }
 
 .nav-my .navbar-toggle .icon-bar{
@@ -57,9 +45,7 @@ body{
 }
 
 .nav-my .navbar-nav > li.active > a,
-.nav-my .navbar-nav > li > a:hover,
-.nav-my .navbar-nav > li > a:focus {
-  background-color: transparent;
+.nav-my .navbar-nav > li > a:hover {
   color: #2D5016;
   font-weight: 700;
   border-bottom: 3px solid #3A6B2F;
@@ -68,11 +54,11 @@ body{
 .bar-info{
   background: linear-gradient(135deg, #E8F5E9 0%, #D4EBD6 100%);
   color: #2D5016;
-  padding: 12px 0;
+  padding: 10px 0;
   font-size: 13px;
   font-weight: 600;
   position: fixed;
-  top: 70px;
+  top: 60px;
   left: 0; right: 0;
   z-index: 1029;
   border-bottom: 1.5px solid #C5E1A5;
@@ -164,39 +150,45 @@ body{
   max-width: 380px;
   border-radius: 20px;
 }
+
 .promo-minggu {
   padding: 80px 0;
-  background: linear-gradient(135deg, #FAFCFA 0%, #F3F8F3 100%);
+  background: #F8FAF8;
 }
 .promo-minggu h2 {
   font-size: 38px;
   font-weight: 800;
-  color: #2D5016;
+  color: #1F3D1F;
   margin: 0 0 50px;
   text-align: center;
 }
-.grid-promo {
+.row-promo {
   display: flex;
-  gap: 25px;
+  flex-wrap: wrap;
 }
 .kartu-promo {
-  background: white;
-  border-radius: 18px;
-  padding: 32px;
-  box-shadow: 0 4px 20px rgba(58,107,47,0.05);
+  background: linear-gradient(135deg, #FFF7ED 0%, #FFFBEB 100%);
+  border-radius: 20px;
+  padding: 35px 30px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
   height: 100%;
-  display: flex;
-  flex-direction: column;
+}
+
+.kartu-promo.senin {
+  background: linear-gradient(135deg, #FEFBE8 0%, #F0FDF4 100%);
 }
 .hari-promo {
   background: #E8F5E9;
-  color: #3A6B2F;
-  font-size: 11px;
-  font-weight: 700;
-  padding: 6px 14px;
+  color: #2D5016;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 8px 16px;
   border-radius: 20px;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   margin-bottom: 20px;
+  width: fit-content;
 }
 .hari-promo.jumat {
   background: linear-gradient(135deg, #FFF3CD 0%, #FFE69C 100%);
@@ -205,38 +197,70 @@ body{
 .isi-promo {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 20px;
-  margin-top: auto;
+  flex: 1;
 }
 .teks-promo {flex: 1}
 .teks-promo h3 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1F3D1F;
+  margin: 0 0 8px;
+  letter-spacing: 0.5px;
+}
+.teks-promo p {
+  font-size: 15px;
+  color: #4B5563;
+  line-height: 1.7;
+  margin-bottom: 6px;
+}
+.teks-promo .highlight {
   font-size: 22px;
-  font-weight: 700;
-  color: #2D5016;
-  margin: 0 0 12px;
+  font-weight: 800;
+  color: #EA580C;
+  display: block;
+  margin: 6px 0 12px;
 }
 .buy2get1-box {
-  background: #F0F7F0;
-  border: 1.5px dashed #C5E1A5;
-  color: #2D5016;
+  background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%);
+  border: 2px dashed #15803D;
+  color: #1F3D1F;
   font-size: 20px;
   font-weight: 800;
   text-align: center;
-  padding: 14px 10px;
-  border-radius: 12px;
+  padding: 16px 10px;
+  border-radius: 14px;
   margin: 14px 0;
   letter-spacing: 0.5px;
 }
+.buy2get1-box span {
+  font-size: 24px;
+  color: #15803D;
+}
+
 .gambar-promo img {
-  width: 90px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   object-fit: contain;
+  filter: drop-shadow(0 4px 10px rgba(58,107,47,0.1));
+}
+.gambar-promo.jumat {
+  display: flex;
+  gap: 10px;
 }
 .gambar-promo.jumat img {
-  width: 60px;
-  height: 80px;
+  width: 65px;
+  height: 85px;
   object-fit: contain;
 }
+.catatan-promo {
+  font-size: 12px;
+  color: #6B7280;
+  font-style: italic;
+  margin-top: 10px;
+}
+
 .kata-pelanggan {
   padding: 70px 0;
   background: white;
@@ -291,7 +315,7 @@ body{
   .navbar.navbar-inverse .navbar-nav{float: none; margin: 0}
   .navbar.navbar-inverse .navbar-nav > li{float: none}
   
-  .bar-info{top: 70px; font-size: 12px; padding: 10px 0}
+  .bar-info{top: 60px; font-size: 12px; padding: 10px 0}
   .hero{
     min-height: auto;
     padding: 30px 18px 70px;
@@ -310,14 +334,16 @@ body{
   
   .promo-minggu{padding: 50px 18px}
   .promo-minggu h2{font-size: 26px; margin-bottom: 30px}
-  .grid-promo{display: block}
+  .row-promo{display: block}
   .kartu-promo{margin-bottom: 20px; padding: 24px}
   .isi-promo{flex-direction: column; text-align: center}
-  .gambar-promo, .gambar-promo.jumat{margin-top: 15px}
-  .gambar-promo img{width: 80px; height: 90px}
+  .gambar-promo, .gambar-promo.jumat{margin-top: 15px; justify-content: center}
+  .gambar-promo img{width: 110px; height: 110px}
   .gambar-promo.jumat img{width: 55px; height: 75px}
   .buy2get1-box{font-size: 18px}
   .buy2get1-box span{font-size: 22px}
+  .teks-promo h3{font-size: 24px}
+  .teks-promo .highlight{font-size: 20px}
   
   .kata-pelanggan{padding: 50px 18px}
   .kata-pelanggan h2{font-size: 28px; margin-bottom: 30px}
@@ -329,7 +355,7 @@ body{
 <body>
 
 <nav class="navbar nav-my">
-  <div class="container">
+  
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle Nav</span>
@@ -348,7 +374,7 @@ body{
         <li><a href="kontak.html">Kontak</a></li>
       </ul>
     </div>
-  </div>
+ 
 </nav>	
 
 <div class="bar-info">
@@ -372,11 +398,12 @@ body{
 
 <section class="cerita-kita">
   <div class="container">
-    <h2>Our Story</h2>
+    <h2>Cerita Kita</h2>
     <div class="row">
       <div class="col-md-5">
+        
         <div class="story-img">
-          <img src="owner.jpeg" alt="Kak Ity - Owner EsNya Kak Ity" class="img-responsive center-block">
+          <img src="member.jpeg" alt="Kak Ity - Owner EsNya Kak Ity" class="img-responsive center-block">
         </div>
       </div>
       <div class="col-md-7">
@@ -398,33 +425,36 @@ body{
 <section class="promo-minggu">
   <div class="container">
     <h2>Promo Mingguan Spesial</h2>
-    <div class="row grid-promo">
-      <div class="col-md-6">
-        <div class="kartu-promo">
-          <span class="hari-promo">SENIN</span>
+    <div class="row row-promo">
+      <div class="col-md-6 col-sm-12">
+        <div class="kartu-promo senin">
+          <span class="hari-promo">❤️ SENIN</span>
           <div class="isi-promo">
             <div class="teks-promo">
-              <h3>Monday QRIS</h3>
-              <p>Bayar pake QRIS <b>GRATIS BETTER</b><br>Upgrade ke cup better tanpa biaya tambahan</p>
+              <h3>MONDAY QRIS</h3>
+              <p>BAYAR PAKE QRIS</p>
+              <span class="highlight">GRATIS COKLAT</span>
+              <p class="catatan-promo">*Harga tetap sesuai ukuran cup ya bestie</p>
             </div>
             <div class="gambar-promo">
-              <img src="better-removebg-preview.png" alt="Better">
+              <img src="qr.png" alt="Bayar QRIS">
             </div>
           </div>
         </div>
       </div>
       
-      <div class="col-md-6">
+      <div class="col-md-6 col-sm-12">
         <div class="kartu-promo">
-          <span class="hari-promo jumat">JUMAT BERKAH 🕌</span>
+          <span class="hari-promo jumat">🕌 JUMAT BERKAH</span>
           <div class="isi-promo">
             <div class="teks-promo">
               <h3>Jumat Berkah</h3>
               <div class="buy2get1-box">
-                BUY 2 <span>GET 1 FREE</span>
+                <span>BUY 2 GET 1 FREE</span>
               </div>
-              <p>Beli 2 Es Teh Original GRATIS 1<br>Beli 2 Greentea GRATIS 1 Es Teh Original</p>
-              <p><small>*Berlaku kelipatan, setiap Jumat aja ya bestie</small></p>
+              <p>Beli 2 Es Teh Original GRATIS 1</p>
+              <p>Beli 2 Greentea GRATIS 1 Es Teh Original</p>
+              <p class="catatan-promo">*Berlaku kelipatan di semua varian, setiap Jumat aja ya bestie</p>
             </div>
             <div class="gambar-promo jumat">
               <img src="teh-ori-removebg-preview.png" alt="Es Teh Original">
