@@ -21,33 +21,44 @@ body{
   top: 0; left: 0; right: 0;
   z-index: 100;
 }
-.nav-my .navbar-brand{
+.navbar-invers{
+  background: #fff;
+  border-bottom: 2px solid #C5E1A5; 
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1030;
+  padding: 0 20px;
+ 
+  
+  justify-content: space-between;
+}
+.navbar-invers .navbar-brand{
   color: #3A6B2F;
   font-size: 22px;
   font-weight: 800;
-  padding: 20px 15px; 
+  padding: 0; 
+  line-height: 60px;
 }
-.nav-my .navbar-nav > li > a{
+.navbar-invers .navbar-nav > li > a{
   color: #3A6B2F;
   font-weight: 500;
   font-size: 15px;
-  padding: 20px 20px; 
+  padding: 0 20px; 
+  line-height: 60px; 
 }
-
-.nav-my .navbar-toggle{
-  border-color: #C5E1A5;
-  margin-top: 18px;
-}
-
-.nav-my .navbar-toggle .icon-bar{
-  background: #3A6B2F;
-}
-
-.nav-my .navbar-nav > li.active > a,
-.nav-my .navbar-nav > li > a:hover {
+.navbar-invers .navbar-nav > li.active > a,
+.navbar-invers .navbar-nav > li > a:hover {
   color: #2D5016;
   font-weight: 700;
+  background: transparent;
   border-bottom: 3px solid #3A6B2F;
+}
+.navbar-invers .navbar-toggle{
+  border-color: #C5E1A5;
+  margin: 13px 0; 
+}
+.navbar-invers .navbar-toggle .icon-bar{
+  background: #3A6B2F;
 }
 
 .hero-tentang{
@@ -175,11 +186,7 @@ body{
 }
 @media (max-width: 767px){
   body{padding-top: 60px}
-  .navbar.navbar-inverse{min-height: 60px}
-  .navbar.navbar-inverse .navbar-brand{height: 60px; line-height: 30px; font-size: 20px}
-  .navbar.navbar-inverse .navbar-nav > li > a{height: auto; line-height: 20px; padding: 15px}
-  .navbar.navbar-inverse .navbar-nav{float: none; margin: 0}
-  .navbar.navbar-inverse .navbar-nav > li{float: none}
+  
   
   .hero-tentang{padding: 40px 18px 45px; margin-top: -0px} 
   .isi-hero h1{font-size: 32px; margin-bottom: 14px}
@@ -202,8 +209,9 @@ body{
 </head>
 <body>
 
-<nav class="navbar nav-my">
- 
+<nav class="navbar-invers">
+
+
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-menu">
         <span class="sr-only">Toggle Nav</span>

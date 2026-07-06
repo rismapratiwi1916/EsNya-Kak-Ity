@@ -15,40 +15,44 @@ body{
   background: #FAFCFA;
   font-family: 'Poppins', sans-serif;
 }
-.nav-my{
+.navbar-invers{
   background: #fff;
   border-bottom: 2px solid #C5E1A5; 
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1030;
+  padding: 0 20px;
+ 
+  
+  justify-content: space-between;
 }
-.nav-my .navbar-brand{
+.navbar-invers .navbar-brand{
   color: #3A6B2F;
   font-size: 22px;
   font-weight: 800;
-  padding: 20px 15px; 
+  padding: 0; 
+  line-height: 60px;
 }
-.nav-my .navbar-nav > li > a{
+.navbar-invers .navbar-nav > li > a{
   color: #3A6B2F;
   font-weight: 500;
   font-size: 15px;
-  padding: 20px 20px; 
+  padding: 0 20px; 
+  line-height: 60px; 
 }
-
-.nav-my .navbar-toggle{
-  border-color: #C5E1A5;
-  margin-top: 18px;
-}
-
-.nav-my .navbar-toggle .icon-bar{
-  background: #3A6B2F;
-}
-
-.nav-my .navbar-nav > li.active > a,
-.nav-my .navbar-nav > li > a:hover {
+.navbar-invers .navbar-nav > li.active > a,
+.navbar-invers .navbar-nav > li > a:hover {
   color: #2D5016;
   font-weight: 700;
+  background: transparent;
   border-bottom: 3px solid #3A6B2F;
+}
+.navbar-invers .navbar-toggle{
+  border-color: #C5E1A5;
+  margin: 13px 0; 
+}
+.navbar-invers .navbar-toggle .icon-bar{
+  background: #3A6B2F;
 }
 
 .bar-info{
@@ -309,11 +313,7 @@ body{
 @media (max-width: 767px){
   body{padding-top: 102px} 
   
-  .navbar.navbar-inverse{min-height: 60px}
-  .navbar.navbar-inverse .navbar-brand{height: 60px; line-height: 30px; font-size: 20px}
-  .navbar.navbar-inverse .navbar-nav > li > a{height: auto; line-height: 20px; padding: 15px}
-  .navbar.navbar-inverse .navbar-nav{float: none; margin: 0}
-  .navbar.navbar-inverse .navbar-nav > li{float: none}
+ 
   
   .bar-info{top: 60px; font-size: 12px; padding: 10px 0}
   .hero{
@@ -354,27 +354,25 @@ body{
 </head>
 <body>
 
-<nav class="navbar nav-my">
-  
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle Nav</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">EsNya Kak Ity</a>
-    </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="tentang.html">Tentang</a></li>
-        <li><a href="outlet.html">Outlet</a></li>
-        <li><a href="kontak.html">Kontak</a></li>
-      </ul>
-    </div>
- 
+<nav class="navbar-invers">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle Nav</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="index.html">EsNya Kak Ity</a>
+  </div>
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right">
+      <li class="active"><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="tentang.html">Tentang</a></li>
+      <li><a href="outlet.html">Outlet</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+    </ul>
+  </div>
 </nav>	
 
 <div class="bar-info">
