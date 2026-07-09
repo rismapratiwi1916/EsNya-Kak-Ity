@@ -6,9 +6,7 @@
 <title>EsNya Kak Ity - Es Teh Seger 4 Ribuan</title>
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
 
 <style>
 body{
@@ -16,45 +14,47 @@ body{
   background: #FAFCFA;
   font-family: 'Poppins', sans-serif;
 }
-.navbar-invers{
-  background: #fff;
-  border-bottom: 2px solid #C5E1A5; 
+
+
+.navbar-inverse{
+  background-color: #ffffff;
+  border-radius: 0;
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1030;
-  padding: 0 20px;
- 
-  
-  justify-content: space-between;
+  margin-bottom: 0;
+  border: none;
+  border-bottom: 2px solid #C5E1A5;
 }
-.navbar-invers .navbar-brand{
+
+.navbar-inverse .navbar-brand{
   color: #3A6B2F;
   font-size: 22px;
   font-weight: 800;
-  padding: 0; 
-  line-height: 60px;
 }
-.navbar-invers .navbar-nav > li > a{
+
+
+.navbar-inverse .navbar-nav > li > a{
   color: #3A6B2F;
   font-weight: 500;
   font-size: 15px;
-  padding: 0 20px; 
-  line-height: 60px; 
 }
-.navbar-invers .navbar-nav > li.active > a,
-.navbar-invers .navbar-nav > li > a:hover {
+.navbar-inverse .navbar-nav > li > a:hover{
   color: #2D5016;
+ 
+}
+.navbar-inverse .navbar-nav > .active > a{
+ 
   font-weight: 700;
-  background: transparent;
-  border-bottom: 3px solid #3A6B2F;
+ 
 }
-.navbar-invers .navbar-toggle{
-  border-color: #C5E1A5;
-  margin: 13px 0; 
+
+
+.navbar-inverse .navbar-toggle .icon-bar{
+  background-color: #222;
 }
-.navbar-invers .navbar-toggle .icon-bar{
-  background: #3A6B2F;
-}
+
+
 
 .bar-info{
   background: linear-gradient(135deg, #E8F5E9 0%, #D4EBD6 100%);
@@ -63,7 +63,7 @@ body{
   font-size: 13px;
   font-weight: 600;
   position: fixed;
-  top: 60px;
+  top: 50px;
   left: 0; right: 0;
   z-index: 1029;
   border-bottom: 1.5px solid #C5E1A5;
@@ -313,10 +313,7 @@ body{
 
 @media (max-width: 767px){
   body{padding-top: 102px} 
-  
- 
-  
-  .bar-info{top: 60px; font-size: 12px; padding: 10px 0}
+  .bar-info{top: 50px; font-size: 12px; padding: 10px 0}
   .hero{
     min-height: auto;
     padding: 30px 18px 70px;
@@ -355,26 +352,30 @@ body{
 </head>
 <body>
 
-<nav class="navbar-invers">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-      <span class="sr-only">Toggle Nav</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="index.html">EsNya Kak Ity</a>
-  </div>
-  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <ul class="nav navbar-nav navbar-right">
-      <li class="active"><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
-      <li><a href="menu.html">Menu</a></li>
-      <li><a href="tentang.html">Tentang</a></li>
-      <li><a href="outlet.html">Outlet</a></li>
-      <li><a href="kontak.html">Kontak</a></li>
-    </ul>
-  </div>
-</nav>	
+<nav class="navbar navbar-inverse">
+		
+	<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			<span class="sr-only">Toggle Nav</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="index.html">EsNya Kak Ity</a>
+	</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+			<li class="active"><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
+			<li><a href="menu.html">Menu</a></li>
+			<li><a href="tentang.html">Tentang</a></li>
+			<li><a href="outlet.html">Outlet</a></li>
+			<li><a href="kontak.html">Kontak</a></li>
+
+			
+			</ul>
+	</div>
+		
+	</nav>	
 
 <div class="bar-info">
     Only the best for you bestie. Gula asli 100%🔥
