@@ -366,7 +366,7 @@ body{
   .bar-info{top: 50px; font-size: 12px; padding: 10px 0}
   .hero{
     min-height: auto;
-    padding: 30px 18px 70px;
+    padding: 80px 18px 70px;
     text-align: center;
   }
   .hero .row{display: block !important;}
@@ -571,7 +571,7 @@ body{
 
     border: none;
     font-size: 10px; 
-    font-weight: 600;
+    font-weight: 500;
    
   }
 }
